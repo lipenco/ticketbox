@@ -4,13 +4,14 @@
 
     initialize: ->
       currentUser = App.request "get:current:user"
+      currentUserId = currentUser.get("id")
 
 
-      @layout = @getLayoutView currentUser
+      @layout = @getLayoutView currentUserId
 
       @listenTo @layout, "show", =>
         @nameRegion currentUser
-        @loginRegion()
+        @loginRegion() if currentUserId is undefined
 
       App.sidebarRegion.show @layout
 

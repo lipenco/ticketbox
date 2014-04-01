@@ -265,3 +265,10 @@ html, body {
   padding: 15px;
   font-size: 12px;
 }
+
+
+#profilimg {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}

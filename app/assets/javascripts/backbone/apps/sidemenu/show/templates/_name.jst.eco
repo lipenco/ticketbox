@@ -1,12 +1,8 @@
 
-<ul id="top-links">
+<ul>
   <% if @currentUser.id?: %>
-    <li class="user">
-    	<a href="">
-    		<span class="user-wrap">
-    		  <%= @currentUser.name %> </p>
-    		</span>
-    	</a>
+    <li>
+		  <a href="#"><img id="profilimg" src="<%= @currentUser.image %>"> <%= @currentUser.name %> </a>
     </li>
   <% end %>
 </ul>

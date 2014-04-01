@@ -19,8 +19,8 @@
 	App.reqres.setHandler "get:current:user", ->
 		App.currentUser
 
-	# App.reqres.setHandler "get:current:favorites", ->
-	# 	App.favorites
+	App.reqres.setHandler "get:current:favorites", ->
+		App.favorites
 
 	App.addInitializer ->
 		App.module("HeaderApp").start()
