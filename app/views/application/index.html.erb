@@ -1,0 +1,40 @@
+
+
+		<aside id="sidebarLeft" class="sidebarLeft">
+			<div class="scrollableArea">
+      	<a class="shutLeft" href="">&#10006;</a>
+
+<!-- 				<div class="you padded">
+					<a href="http://aidanzealley.com/" target="_blank"><img class="avatar" src="pictures/aidan.jpg" alt="Aidan Zealley" width="50"/></a>
+					<h2><a href="http://aidanzealley.com/" target="_blank">Aidan Zealley</a></h2>
+				</div> -->
+<!-- 				<ul class="paddedLight">
+					<li><a class="current" href="index.html"><span class="icon">&#8962;</span>Home</a></li>
+					<li><a href="https://github.com/AidanZealley/off.canvas" target="_blank"><span class="social">&#62208;</span>GitHub Repository</a></li>
+					<li><a href="leftonly.html"><span class="icon">&larr;</span>Left sidebar only</a></li>
+					<li><a href="rightonly.html"><span class="icon">&rarr;</span>Right sidebar only</a></li>
+					<li><a href="http://aidanzealley.com/"><span class="icon">&#59254;</span>aidanzealley.com</a></li>
+					<li><a href=""><span class="icon">&#59201;</span>Sign Out</a></li>
+				</ul>  -->
+			</div>
+		</aside>
+
+		<section id="page" class="page">
+			<div id="header-region"></div>
+			<div class="scrollableArea">
+        <div id="main-region"></div>
+        <div id="footer-region"></div>
+      </div>
+		</section>
+
+
+
+
+<%= javascript_tag do %>
+	$(function() {
+		TB.start({
+<!-- 			currentUser: gon -->
+		});
+    $('html').offcanvas();
+	});
+<% end %>
