@@ -11,7 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require modernizr
 //= require underscore
 //= require backbone
 //= require backbone-associations
@@ -21,11 +20,8 @@
 //= require jquery.spin
 //= require backbone-chooser
 //= require backbone-routefilter
-//= require popcorn
-//= require offcanvas
-//= require overthrow
-//= require hammer
-//= require jquery.hammer
+//= require snap
+//= require snap.config
 //= require_tree ./config
 //= require backbone/app
 
