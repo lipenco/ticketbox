@@ -21,7 +21,6 @@
 //= require backbone-chooser
 //= require backbone-routefilter
 //= require snap
-//= require snap.config
 //= require_tree ./config
 //= require backbone/app
 

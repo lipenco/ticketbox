@@ -1,8 +1,8 @@
 
 <div class="container">
+
 <div class="header">
     <ul class="nav nav-pills pull-right"></ul>
-
-  <h3 class="text-muted"> <a id="leftBurger" class="slideRight" href="">&#9776;</a> Talking Heads</h3>
+  <h3 class="text-muted"><a class="left-open" href="">&#9776;</a>  Talking Heads</h3>
 </div>
 </div>

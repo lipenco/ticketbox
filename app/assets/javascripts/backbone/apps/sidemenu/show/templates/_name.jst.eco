@@ -1,0 +1,12 @@
+
+<ul id="top-links">
+  <% if @currentUser.id?: %>
+    <li class="user">
+    	<a href="">
+    		<span class="user-wrap">
+    		  <%= @currentUser.name %> </p>
+    		</span>
+    	</a>
+    </li>
+  <% end %>
+</ul>

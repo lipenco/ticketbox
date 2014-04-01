@@ -10,7 +10,7 @@
 
       @listenTo @layout, "show", =>
         @nameRegion currentUser
-        @loginRegion() if currentUserId is undefined
+        @loginRegion()
 
       App.sidebarRegion.show @layout
 

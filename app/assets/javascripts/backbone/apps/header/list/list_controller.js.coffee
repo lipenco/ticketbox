@@ -8,6 +8,10 @@
       links = App.request "header:entities", (currentUserName)
 
       headerView = @getHeaderView links
+
+      # @listenTo headerView, "nav:open:sidemenu", ->
+      #   snapper.expand('left')
+
       App.headerRegion.show headerView
 
 
