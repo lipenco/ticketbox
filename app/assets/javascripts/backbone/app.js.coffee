@@ -10,7 +10,7 @@
 
 
 
-	# App.rootRoute = Routes.conferences_path()
+	App.rootRoute = Routes.tickets_path()
 
 	App.on "initialize:before", (options) ->
 		@currentUser = App.request "set:current:user", options.currentUser
