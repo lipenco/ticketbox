@@ -18,7 +18,6 @@
 	class List.Ticket extends App.Views.ItemView
 		template: "ticket/list/_ticket"
 		tagName: "li"
-		className: "ticket"
 
 		triggers:
 			"click .ticket-delete button" : "ticket:delete:clicked"

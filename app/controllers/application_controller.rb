@@ -5,9 +5,8 @@ class ApplicationController < ActionController::Base
 
 
   def index
-		gon.rabl
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
-		gon.rabl "app/views/users/show.json.rabl"
+    gon.rabl(:template => 'app/views/users/show.json.rabl')
 	end
 
 
