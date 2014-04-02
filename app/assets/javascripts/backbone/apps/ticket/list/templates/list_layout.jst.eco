@@ -2,8 +2,10 @@
 	<section>
 		<div class="row">
 			<div id="panel-region" class=""></div>
-			<div id="new-region" class=""></div>
-			<div id="new-picture"></div>
+			<div class="row">
+					<div id="new-region" class="col-md-5"></div>
+					<div id="new-picture" class="col-md-5"></div>
+		  </div>
 		</div>
 	</section>
 	<section>

@@ -17,12 +17,12 @@
 
 
 
-    panelRegion: ->
+    panelRegion: (ticket) ->
       panelView = @getPanelView()
 
       @listenTo panelView, "new:ticket:button:clicked", =>
         @newRegion()
-        @pictureRegion()
+        @pictureRegion(ticket)
 
       @show panelView, region: @layout.panelRegion
       # @layout.panelRegion.show panelView
@@ -31,8 +31,8 @@
     newRegion: ->
       App.execute "new:ticket:create", @layout.newRegion
 
-    pictureRegion: ->
-      App.execute "add:picture:new", @layout.pictureRegion
+    pictureRegion: (ticket)->
+      App.execute "add:picture:new", @layout.pictureRegion, ticket
 
 
 
