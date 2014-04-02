@@ -4,6 +4,7 @@ class CreateTickets < ActiveRecord::Migration
       t.string :name
       t.date :date
       t.references :user, index: true
+      t.references :category, index: true
       t.timestamps
     end
   end

@@ -19,24 +19,16 @@ ActiveRecord::Schema.define(version: 20140401192307) do
     t.datetime "updated_at"
   end
 
-  create_table "ticket_categories", force: true do |t|
-    t.integer  "ticket_id"
+  create_table "tickets", force: true do |t|
+    t.string   "name"
+    t.date     "date"
+    t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "ticket_categories", ["category_id"], name: "index_ticket_categories_on_category_id"
-  add_index "ticket_categories", ["ticket_id"], name: "index_ticket_categories_on_ticket_id"
-
-  create_table "tickets", force: true do |t|
-    t.string   "name"
-    t.date     "date"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
+  add_index "tickets", ["category_id"], name: "index_tickets_on_category_id"
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: true do |t|

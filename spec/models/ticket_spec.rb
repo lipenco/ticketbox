@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe Ticket do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:subject) { FactoryGirl.build(:ticket) }
+
+  describe 'attributes' do
+    it 'has a date' do
+      expect(subject.date).to eq(Date.today)
+    end
+  end
 end
