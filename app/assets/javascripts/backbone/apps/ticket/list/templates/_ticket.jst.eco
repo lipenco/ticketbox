@@ -1,1 +1,1 @@
-<li><%= @ticket.name %> whta the fuck</li>
+<li><%= @name %> whta the fuck</li>
