@@ -1,0 +1,40 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/magda/github/lipenco/ticketbox/app/models/category.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/magda/github/lipenco/ticketbox/app/models/ticket.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/magda/github/lipenco/ticketbox/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1396406895
+  }
+}
