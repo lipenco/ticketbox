@@ -11,6 +11,15 @@
     list: ->
       new TicketApp.List.Controller
 
+    newTicket: (region) ->
+      new TicketApp.New.Controller
+        region: region
+
+
+
+  App.commands.setHandler "new:ticket:create", (region) ->
+    API.newTicket region
+
 
 
 

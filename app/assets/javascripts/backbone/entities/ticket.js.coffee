@@ -16,5 +16,13 @@
         reset: true
       tickets
 
+    newTicket: ->
+      new Entities.Ticket
+
+
   App.reqres.setHandler "ticket:entities", ->
     API.getTickets()
+
+
+  App.reqres.setHandler "new:ticket:entity", ->
+    API.newTicket()
