@@ -31,6 +31,10 @@ gem 'eco'
 gem 'spinjs-rails'
 
 
+gem 'carrierwave'
+gem "fog"
+
+
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'

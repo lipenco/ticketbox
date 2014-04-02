@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root "application#index"
 
-  resources :tickets
+  resources :tickets do
+    resources :pictures
+  end
 
   get '/tickets', to: 'tickets#index'
 

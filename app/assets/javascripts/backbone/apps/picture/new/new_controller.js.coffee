@@ -23,10 +23,16 @@
 
       @listenTo pictureView, "take:snapshot", =>
         imgSource = Recorder.snapshot(video)
+        window.wy = pictureView
+        img = document.createElement("img")
+        img.src = imgSource
+
+        pictureView.$el.append img
+
         # img = document.createElement("img")
         # img.src = imgSource
         # $('#imgs').appendChild img
-        Recorder.upload "/test/image.php",
+        Recorder.upload "/tickets/1504/pictures",
           name: "sofish"
           file: imgSource
         , (data) ->

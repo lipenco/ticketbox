@@ -5,7 +5,7 @@ class TicketsController < ApplicationController
   respond_to :json
 
   def index
-    @tickets = User.first.tickets.all
+    @tickets = current_user.tickets.all
     # @tickets = Ticket.all
   end
 
