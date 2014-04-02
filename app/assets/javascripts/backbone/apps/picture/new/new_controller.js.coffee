@@ -16,8 +16,24 @@
     pictureRegion:(ticket) ->
       pictureView = @getPictureRegion(ticket)
 
-      # @listenTo panelView, "new:ticket:button:clicked", =>
-      #   @newRegion()
+      @listenTo pictureView, "play:video", =>
+        Recorder.play video, "both", ->
+          snapshot.style.display = "inline"
+          return
+
+      @listenTo pictureView, "take:snapshot", =>
+        imgSource = Recorder.snapshot(video)
+        # img = document.createElement("img")
+        # img.src = imgSource
+        # $('#imgs').appendChild img
+        Recorder.upload "/test/image.php",
+          name: "sofish"
+          file: imgSource
+        , (data) ->
+          console.log data
+          return
+
+
 
       @show pictureView, region: @layout.pictureRegion
 

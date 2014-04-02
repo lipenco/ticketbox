@@ -10,3 +10,7 @@
 
   class New.Picture extends App.Views.ItemView
     template: "picture/new/_picture"
+
+    triggers:
+      "click #play" : "play:video"
+      "click #snapshot" : "take:snapshot"
