@@ -2,8 +2,6 @@
 
 FactoryGirl.define do
   factory :ticket do
-    name "MyString"
-    user nil
-    category nil
+    name {|n| "Ticket #{n}"}
   end
 end

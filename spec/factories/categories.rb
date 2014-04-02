@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :category do
-    name "MyString"
+    name {|n| "Category #{n}"}
   end
 end

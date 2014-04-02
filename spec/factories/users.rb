@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :user do
-    name "MyString"
-    email "MyString"
+    name {|n| "User - #{n}"}
+    email {|n| "#{n}@example.com"}
+    provider "twitter"
     uid 1
-    provider "MyString"
   end
 end

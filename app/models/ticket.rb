@@ -1,4 +1,8 @@
 class Ticket < ActiveRecord::Base
   belongs_to :user
-  has_one :category
+  belongs_to :category
+
+  def date
+    self[:date] || Date.today
+  end
 end
