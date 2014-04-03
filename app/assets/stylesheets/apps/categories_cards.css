@@ -10,6 +10,7 @@ margin-left: 0;
 margin-right: 0;
 padding-left: 10px;
 }
+
 .price-table:after {
   content: "";
   display: block;
@@ -25,6 +26,10 @@ padding-left: 10px;
 
 .head {
   position: relative;
+}
+
+.head h1 {
+  color:#48c9b0;
 }
 .head:after, .head:before {
   content: "";

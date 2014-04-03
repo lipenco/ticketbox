@@ -9,6 +9,9 @@ class CategoriesController < ApplicationController
     @category = Category.find params[:id]
   end
 
+  def popular
+    @categories = Category.select("categories.*, COUNT(tickets.id) AS t_count").joins(:tickets).group("categories.id").order("t_count DESC").limit(3)
+  end
 
 
   def index

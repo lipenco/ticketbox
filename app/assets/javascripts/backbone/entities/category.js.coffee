@@ -12,6 +12,14 @@
 
     url: -> Routes.categories_path()
 
+  class Entities.PopularCategoryCollection  extends App.Entities.Collection
+
+    model: Entities.Category
+
+    url: -> "/popular_categories"
+
+
+
   API =
     getCategories: ->
       categories = new Entities.CategoryCollection
@@ -19,6 +27,16 @@
         reset: true
       categories
 
+    getPopularCategories: ->
+      categories = new Entities.PopularCategoryCollection
+      categories.fetch
+        reset: true
+      categories
+
+
 
   App.reqres.setHandler "category:entities", ->
     API.getCategories()
+
+  App.reqres.setHandler "category:popular:entities", ->
+    API.getPopularCategories()

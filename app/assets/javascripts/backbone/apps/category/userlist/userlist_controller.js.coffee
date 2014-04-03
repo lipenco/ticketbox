@@ -3,7 +3,7 @@
   class UserList.Controller extends App.Controllers.Application
 
     initialize: ->
-      categories = App.request "category:entities"
+      categories = App.request "category:popular:entities"
 
       @layout = @getLayoutView categories
 

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :categories
 
   get '/tickets', to: 'tickets#index'
+  get '/popular_categories', to: 'categories#popular'
 
 
 

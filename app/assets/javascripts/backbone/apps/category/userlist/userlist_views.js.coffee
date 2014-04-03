@@ -11,7 +11,7 @@
   class UserList.Category extends App.Views.ItemView
     template: "category/userlist/_category"
     tagName: "li"
-    className: "col-md-3"
+    className: "col-md-4"
 
     triggers:
       "click button.flipper" : "category:flip"

@@ -2,7 +2,7 @@
 
  <li >
 
-   <button class="btn btn-default row" style="width:100%">
+   <button class="btn btn-primary row" style="width:100%">
      <span class="col-md-1 glyphicon glyphicon-plus plusss">
      </span>
       <span class="col-md-6"><%= @name %>

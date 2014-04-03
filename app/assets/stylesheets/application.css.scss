@@ -28,14 +28,27 @@ body {
 #categories-user-region {
 
   margin-top: 40px;
-  border-radious: 10px;
-
+  border-radius:15px;
+  padding-bottom: 20px;
 background-color: #5d5d5d;
  color: #c5c5c5;
 
 }
 
 li {list-style: none;}
+
+.btn-primary {
+color: #ffffff;
+background-color: #1abc9c;
+margin-bottom:0.3em;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+color: #ffffff;
+background-color: #48c9b0;
+border-color: #48c9b0;
+
+}
 
 .theme-dropdown .dropdown-menu {
   position: static;
