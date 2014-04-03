@@ -8,6 +8,7 @@
 			newRegion:		"#new-region"
 			ticketsRegion: "#tickets-region"
 			pictureRegion: "#new-picture"
+			addToCatRegion: "#add-to-category-region"
 
 
 	class List.Panel extends App.Views.ItemView

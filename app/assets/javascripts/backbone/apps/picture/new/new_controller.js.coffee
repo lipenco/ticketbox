@@ -32,7 +32,7 @@
         # img = document.createElement("img")
         # img.src = imgSource
         # $('#imgs').appendChild img
-        Recorder.upload "/tickets/1504/pictures",
+        Recorder.upload "/tickets/#{ticket.id}/pictures",
           name: "sofish"
           file: imgSource
         , (data) ->

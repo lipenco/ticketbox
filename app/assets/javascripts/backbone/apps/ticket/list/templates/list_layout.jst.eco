@@ -1,6 +1,7 @@
 <div id="tickets-list" class="row col-md-8">
 	<section>
 		<div class="row">
+			<div id="add-to-category-region" class=""></div>
 			<div id="panel-region" class=""></div>
 			<div class="row">
 					<div id="new-region" class="col-md-5"></div>

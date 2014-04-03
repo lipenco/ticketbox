@@ -11,18 +11,19 @@
 
       @listenTo @layout, "show", =>
         @panelRegion()
+        @addToCatRegion()
         @ticketsRegion tickets
 
       @show @layout, loading: true
 
 
 
-    panelRegion: (ticket) ->
+    panelRegion: ->
       panelView = @getPanelView()
 
       @listenTo panelView, "new:ticket:button:clicked", =>
         @newRegion()
-        @pictureRegion(ticket)
+        # @pictureRegion()
 
       @show panelView, region: @layout.panelRegion
       # @layout.panelRegion.show panelView
@@ -31,10 +32,8 @@
     newRegion: ->
       App.execute "new:ticket:create", @layout.newRegion
 
-    pictureRegion: (ticket)->
-      App.execute "add:picture:new", @layout.pictureRegion, ticket
-
-
+    addToCatRegion: ->
+      App.execute "list:categories", @layout.addToCatRegion
 
 
     ticketsRegion: (tickets) ->

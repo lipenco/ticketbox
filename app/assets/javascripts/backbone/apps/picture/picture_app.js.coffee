@@ -9,7 +9,7 @@
     newPicture: (region, ticket) ->
       new PictureApp.New.Controller
         region: region
-        model: ticket
+        ticket: ticket
 
 
 

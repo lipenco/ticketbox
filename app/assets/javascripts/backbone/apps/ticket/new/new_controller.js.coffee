@@ -5,8 +5,10 @@
     initialize: ->
       ticket = App.request "new:ticket:entity"
 
+
       @listenTo ticket, "created", ->
         console.log "created"
+        @pictureRegion(ticket)
         # id = conference.id
         # App.vent.trigger "conference:created", id, conference
 
@@ -18,6 +20,9 @@
         @region.close()
 
       @show formView
+
+    pictureRegion: (ticket)->
+      App.execute "add:picture:new", @region, ticket
 
     getNewView: (ticket) ->
       new New.Ticket
