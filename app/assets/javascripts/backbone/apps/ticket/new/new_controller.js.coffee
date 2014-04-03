@@ -2,8 +2,10 @@
 
   class New.Controller extends App.Controllers.Application
 
-    initialize: ->
-      ticket = App.request "new:ticket:entity"
+    initialize: (options)->
+      {category} = options
+      cat_id = category.id
+      ticket = App.request "new:ticket:entity", cat_id
 
 
       @listenTo ticket, "created", ->

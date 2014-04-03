@@ -1,3 +1,4 @@
 
 <h4>Add new ticket one of the categories: </h4>
-<div id="categories-region"> </div>
+<div id="categories-region"></div>
+<div id="new-ticket-region"></div>

@@ -16,7 +16,9 @@
     url: -> "/tickets/#{@id}/pictures"
 
   class Entities.Ticket extends App.Entities.Model
-    url: -> Routes.tickets_path()
+
+    initialize: (@cat_id, @ticket_id) ->
+    url: -> "/categories/#{@cat_id}/tickets/#{@ticket_id or ""}"
 
     relations : [
           type: Backbone.Many,
@@ -26,7 +28,9 @@
 
   class Entities.TicketCollection extends App.Entities.Collection
     model: Entities.Ticket
-    url: -> Routes.tickets_path()
+
+    initialize: (@cat_id) ->
+    url: -> "/categories/#{@cat_id}/tickets"
 
 
 
@@ -37,13 +41,13 @@
         reset: true
       tickets
 
-    newTicket: ->
-      new Entities.Ticket
+    newTicket: (cat_id)->
+      new Entities.Ticket(cat_id)
 
 
   App.reqres.setHandler "ticket:entities", ->
     API.getTickets()
 
 
-  App.reqres.setHandler "new:ticket:entity", ->
-    API.newTicket()
+  App.reqres.setHandler "new:ticket:entity",(cat_id) ->
+    API.newTicket(cat_id)

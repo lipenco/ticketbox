@@ -15,7 +15,7 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = @current_user.tickets.new(ticket_params)
+    @ticket = @current_user.tickets.new(ticket_params.merge(:category_id => params[:category_id]))
     if @ticket.save
       render "tickets/show"
     else

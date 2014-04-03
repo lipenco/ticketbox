@@ -5,15 +5,15 @@
 
     regions:
       categoriesRegion:	"#categories-region"
+      newTicketRegion: "#new-ticket-region"
 
 
   class List.Category extends App.Views.ItemView
     template: "category/list/_category"
     tagName: "li"
 
-    # triggers:
-    #   "click .ticket-delete button" : "ticket:delete:clicked"
-    #   "click" 										  : "ticket:member:clicked"
+    triggers:
+      "click" : "category:chosen:new"
 
   class List.Empty extends App.Views.ItemView
     template: "category/list/_empty"

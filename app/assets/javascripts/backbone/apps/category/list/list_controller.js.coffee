@@ -14,8 +14,16 @@
 
     categoriesRegion: (categories) ->
       categoriesView = @getCategoriesView categories
-      # @layout.conferenceRegion.show conferenceView
+      @listenTo categoriesView, "childview:category:chosen:new", (child, args) =>
+        category = args.model
+        @newRegion(category)
+        # App.vent.trigger "new:ticket:create"
+
       @show categoriesView, region: @layout.categoriesRegion
+
+    newRegion:(category)->
+      App.vent.trigger "new:ticket:create", @layout.newTicketRegion, category
+
 
 
     getCategoriesView: (categories) ->

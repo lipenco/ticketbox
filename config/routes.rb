@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :pictures
   end
 
+  resources :categories do
+    resources :tickets
+  end
+
 
   resources :categories
 

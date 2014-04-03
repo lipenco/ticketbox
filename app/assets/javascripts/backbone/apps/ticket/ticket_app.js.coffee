@@ -11,14 +11,17 @@
     list: ->
       new TicketApp.List.Controller
 
-    newTicket: (region) ->
+    newTicket: (region, category) ->
       new TicketApp.New.Controller
         region: region
+        category: category
 
 
+  # App.commands.setHandler "new:ticket:create", (region) ->
+  #   API.newTicket region
 
-  App.commands.setHandler "new:ticket:create", (region) ->
-    API.newTicket region
+  App.vent.on "new:ticket:create", (region, category) ->
+    API.newTicket region, category
 
 
 
