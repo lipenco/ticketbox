@@ -51,7 +51,7 @@ class PicturesController < ApplicationController
 
 
   def picture_params
-    params.permit(:url, :ticket_id)
+    params.permit(:file, :url, :ticket_id)
   end
 
   def require_login
