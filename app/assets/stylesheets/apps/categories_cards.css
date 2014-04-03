@@ -17,7 +17,7 @@ padding-left: 10px;
   position: absolute;
   bottom: -16px;
   left: 0;
-  background: -webkit-linear-gradient(-135deg, white 50%, transparent 50%) 0 50%, -webkit-linear-gradient(-45deg, white 50%, transparent 50%) 0 50%, transparent;
+  background: -webkit-linear-gradient(-135deg, #34495e 50%, transparent 50%) 0 50%, -webkit-linear-gradient(-45deg, #34495e 50%, transparent 50%) 0 50%, transparent;
   background-repeat: repeat-x;
   background-size: 16px 16px, 16px 16px, cover, cover;
   height: 16px;
@@ -30,13 +30,14 @@ padding-left: 10px;
 
 .head h1 {
   color:#48c9b0;
+  font-weight: 100;
 }
 .head:after, .head:before {
   content: "";
   display: block;
   width: 13px;
   height: 13px;
-  background-color: #5d5d5d;
+  background-color: #edeff1;
   position: absolute;
   right: -22px;
   border-radius: 50%;
@@ -129,31 +130,6 @@ body {
 
 
 
-.flip-me {
-  position: relative;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-}
-.flip .flip-me {
-  transform: rotateY(180deg);
-}
-
-
-.front, .back {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.front {
-  z-index: 1;
-}
-
-.back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(-180deg);
-}
 
 .price-table {
   display: block;
@@ -164,7 +140,7 @@ body {
   margin-right: 3%;
   padding: 0 1em;
   border-radius: 7px 7px 0px 0px;
-  background-color: white;
+  background-color: #34495e;
   text-align: center;
   transition: bottom 400ms 200ms ease-in-out;
 }
@@ -242,4 +218,44 @@ h2 {
 .contents ul {
   margin: 0;
   padding-left: 20px;
+}
+
+.title.headd {
+  width: 90%;
+  margin-left: 3%;
+  padding: 15px 7px 0;
+
+
+}
+
+
+
+.title.headd:after, .title.headd:before {
+content: "";
+display: block;
+width: 13px;
+height: 13px;
+background-color: #5d5d5d;
+position: absolute;
+right: -10px;
+border-radius: 50%;
+z-index: 2000;
+bottom: -7px;
+}
+
+.title.headd:after {
+  left: -10px;
+}
+
+
+.title.headd h1 {
+
+
+color: rgba(72,201,176, 0.3);
+text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.showall {
+margin-top: 30px;
+margin-bottom: 5px;
 }

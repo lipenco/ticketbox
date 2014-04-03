@@ -1,1 +1,9 @@
+
+<section class="headd title">
+  <h1>Your biggest collection:</h1>
+</section>
+
 <ul class="row"></ul>
+
+
+    <button class="submit showall col-md-offset-5">Show All Categories</button>
