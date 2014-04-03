@@ -17,3 +17,6 @@
 
 # Ignore user uploads
 /public/uploads
+
+# Ignore .env files
+.env*
