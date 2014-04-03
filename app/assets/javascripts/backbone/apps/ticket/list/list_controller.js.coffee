@@ -37,7 +37,6 @@
 
 
     ticketsRegion: (tickets) ->
-      window.w = tickets
       ticketView = @getTicketsView tickets
       # @layout.conferenceRegion.show conferenceView
       @show ticketView, region: @layout.ticketsRegion

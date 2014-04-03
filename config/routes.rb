@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :pictures
   end
 
+
+  resources :categories
+
   get '/tickets', to: 'tickets#index'
 
 

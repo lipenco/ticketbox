@@ -1,0 +1,36 @@
+class CategoriesController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+  before_action :require_login, only: [:destroy, :create, :update, :new]
+  before_action :current_user, only: [ :destroy, :create, :update, :new]
+  respond_to :json
+
+
+  def show
+    @category = Category.find params[:id]
+  end
+
+
+
+  def index
+    @categories = Category.all
+  end
+
+  private
+
+
+  def picture_params
+    params.permit(:file, :url, :ticket_id)
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+      render json: {} # halts request cycle
+    end
+  end
+
+
+
+
+
+end
