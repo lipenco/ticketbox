@@ -1,3 +1,3 @@
 collection @categories
 
-attributes :id, :name
+attributes :id, :name, :tickets_num

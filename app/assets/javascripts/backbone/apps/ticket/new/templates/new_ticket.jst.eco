@@ -7,8 +7,4 @@
     <label class="">What the date?</label>
     <input type="text" name="date" placeholder="Date of Event" />
   </p>
- <p>
-  <label class="">What the category?</label>
-<!--   <input type="text" name="date" placeholder="Date of Event" /> -->
- </p>
 </div>

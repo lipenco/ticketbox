@@ -1,0 +1,22 @@
+
+
+          <div class="price-table">
+            <section class="head">
+              <h1><%= @name %> </h1>
+              <i class="fa fa-barcode"></i>
+            </section>
+            <section class="price">
+              <h2>
+                <span class="dollar"></span><%= @tickets_num %><span class="year">/Tickets</span>
+              </h2>
+            </section>
+            <section class="contents">
+<!--               <ul>
+                <li><span class="bold">Unlimited</span> Videos</li>
+                <li><span class="bold">Unlimited</span> Images</li>
+                <li><span class="bold">Unlimited</span> PSDs</li>
+                <li>A years worth of new releases</li>
+              </ul> -->
+            </section>
+            <button class="submit">Show All Tickets</button>
+          </div>

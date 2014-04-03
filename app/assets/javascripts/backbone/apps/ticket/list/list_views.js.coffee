@@ -4,11 +4,10 @@
 		template: "ticket/list/list_layout"
 
 		regions:
-			panelRegion:	"#panel-region"
 			newRegion:		"#new-region"
 			ticketsRegion: "#tickets-region"
-			pictureRegion: "#new-picture"
 			addToCatRegion: "#add-to-category-region"
+			userCategoriesRegion: "#categories-region"
 
 
 	class List.Panel extends App.Views.ItemView

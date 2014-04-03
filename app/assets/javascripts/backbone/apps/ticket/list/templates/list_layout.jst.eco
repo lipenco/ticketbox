@@ -1,15 +1,9 @@
-<div id="tickets-list" class="row col-md-8">
-	<section>
-		<div class="row">
-			<div id="add-to-category-region" class=""></div>
-			<div id="panel-region" class=""></div>
-			<div class="row">
-					<div id="new-region" class="col-md-5"></div>
-					<div id="new-picture" class="col-md-5"></div>
-		  </div>
-		</div>
-	</section>
-	<section>
+<div id="tickets-list" class="row">
+	<div id="add-to-category-region" class="col-md-2"></div>
+
+  <div class="col-md-10">
+		<div id="categories-region" class=""></div>
 		<div id="tickets-region"</div>
-	</section>
+  </div>
+
 </div>

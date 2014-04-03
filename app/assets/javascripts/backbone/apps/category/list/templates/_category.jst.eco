@@ -1,3 +1,12 @@
 
 
- <li class="col-md-2"><button class="btn btn-default" style="width:100%"> <%= @name %></button> </li>
+ <li >
+
+   <button class="btn btn-default row" style="width:100%">
+     <span class="col-md-1 glyphicon glyphicon-plus plusss">
+     </span>
+      <span class="col-md-6"><%= @name %>
+      </span>
+
+   </button>
+  </li>
