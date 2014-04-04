@@ -14,7 +14,7 @@
     className: "col-md-4"
 
     triggers:
-      "click button.flipper" : "category:flip"
+      "click button.showtickets" : "category:show:tickets"
 
   class UserList.Empty extends App.Views.ItemView
     template: "category/userlist/_empty"

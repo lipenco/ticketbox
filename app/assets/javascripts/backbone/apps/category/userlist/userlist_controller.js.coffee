@@ -14,28 +14,17 @@
 
     categoriesRegion: (categories) ->
       categoriesView = @getCategoriesView categories
-      @listenTo categoriesView, "childview:category:flip", ->
-        console.log "flip"
-        $(".opening").toggleClass("flip");
-      #   category = args.model
-      #   @newRegion(category)
-        # App.vent.trigger "new:ticket:create"
+      @listenTo categoriesView, "childview:category:show:tickets", (child, args) ->
+        category_id = child.model.id
+        App.vent.trigger "category:show:tickets", category_id
 
       @show categoriesView, region: @layout.categoriesRegion
 
-    # newRegion:(category)->
-    #   App.vent.trigger "new:ticket:create", @layout.newTicketRegion, category
-    #
-    #
-    #
+
     getCategoriesView: (categories) ->
       new UserList.Categories
         collection: categories
-    #
-    #
-    # getLayoutView: (categories) ->
-    #   new List.Layout
-    #     collection: categories
+
 
     getLayoutView: (categories) ->
       new UserList.Layout

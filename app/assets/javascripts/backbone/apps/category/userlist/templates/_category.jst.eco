@@ -18,5 +18,5 @@
                 <li>A years worth of new releases</li>
               </ul> -->
             </section>
-            <button class="submit">Show All Tickets</button>
+            <button class="submit showtickets">Show Tickets</button>
           </div>

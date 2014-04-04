@@ -4,8 +4,6 @@
 
     initialize: (options) ->
       {ticket} = options
-
-
       @layout = @getLayoutView ticket
 
       @listenTo @layout, "show", =>
@@ -23,21 +21,16 @@
 
       @listenTo pictureView, "take:snapshot", =>
         imgSource = Recorder.snapshot(video)
-        window.wy = pictureView
         img = document.createElement("img")
         img.src = imgSource
-
+        img.className = "new-image"
         pictureView.$el.append img
-
-
         Recorder.upload "/tickets/#{ticket.id}/pictures",
           name: "sofish"
           file: imgSource
         , (data) ->
           console.log data
           return
-
-
 
       @show pictureView, region: @layout.pictureRegion
 

@@ -1,1 +1,1 @@
-<li><%= @name %> whta the fuck</li>
+<li><%= @name %> </li>

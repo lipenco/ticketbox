@@ -34,9 +34,21 @@
 
 
 
+  class Entities.UsersTicketCollection extends App.Entities.Collection
+    model: Entities.Ticket
+    url: -> "/user_tickets"
+
+
+
   API =
-    getTickets: ->
-      tickets = new Entities.TicketCollection
+    getTickets:(cat_id) ->
+      tickets = new Entities.TicketCollection(cat_id)
+      tickets.fetch
+        reset: true
+      tickets
+
+    getUserTickets: ->
+      tickets = new Entities.UsersTicketCollection
       tickets.fetch
         reset: true
       tickets
@@ -45,9 +57,13 @@
       new Entities.Ticket(cat_id)
 
 
-  App.reqres.setHandler "ticket:entities", ->
-    API.getTickets()
+  App.reqres.setHandler "ticket:entities", (category_id) ->
+    cat_id = category_id
+    API.getTickets(cat_id)
 
 
   App.reqres.setHandler "new:ticket:entity",(cat_id) ->
     API.newTicket(cat_id)
+
+  App.reqres.setHandler "ticket:user:entities", ->
+    API.getUserTickets

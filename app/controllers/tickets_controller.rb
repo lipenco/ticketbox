@@ -6,7 +6,12 @@ class TicketsController < ApplicationController
 
   def index
     @tickets = current_user.tickets.all
+    # binding.pry
     # @tickets = Ticket.all
+  end
+
+  def user_index
+    @tickets = current_user.tickets.all
   end
 
 

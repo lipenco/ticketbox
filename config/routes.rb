@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/tickets', to: 'tickets#index'
   get '/popular_categories', to: 'categories#popular'
 
+  get '/user_tickets', to: 'tickets#user_index'
+
 
 
   get '/auth/:provider/callback', to: 'sessions#create'

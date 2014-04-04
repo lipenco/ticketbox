@@ -3,7 +3,7 @@
   class List.Controller extends App.Controllers.Application
 
     initialize: ->
-      tickets = App.request "ticket:entities"
+      tickets = App.request "category:entities"
 
       @layout = @getLayoutView tickets
 
@@ -12,7 +12,7 @@
       @listenTo @layout, "show", =>
         @addToCatRegion()
         @userCategoriesRegion()
-        @ticketsRegion tickets
+        # @ticketsRegion tickets
 
       @show @layout, loading: true
 
