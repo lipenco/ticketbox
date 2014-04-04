@@ -6,12 +6,11 @@
   #     "tickets": "list"
 
   API =
-    newPicture: (region, ticket) ->
+    newPicture: (ticket) ->
       new PictureApp.New.Controller
-        region: region
         ticket: ticket
 
 
 
-  App.commands.setHandler "add:picture:new", (region, ticket) ->
-    API.newPicture region, ticket
+  App.commands.setHandler "add:picture:new", (ticket) ->
+    API.newPicture ticket

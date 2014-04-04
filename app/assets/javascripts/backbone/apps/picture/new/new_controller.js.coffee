@@ -5,12 +5,13 @@
     initialize: (options) ->
       {ticket} = options
 
+
       @layout = @getLayoutView ticket
 
       @listenTo @layout, "show", =>
         @pictureRegion(ticket)
 
-      @show @layout, loading: true
+      App.photoRegion.show @layout
 
 
     pictureRegion:(ticket) ->
@@ -18,8 +19,7 @@
 
       @listenTo pictureView, "play:video", =>
         Recorder.play video, "both", ->
-          snapshot.style.display = "inline"
-          return
+
 
       @listenTo pictureView, "take:snapshot", =>
         imgSource = Recorder.snapshot(video)
@@ -29,9 +29,7 @@
 
         pictureView.$el.append img
 
-        # img = document.createElement("img")
-        # img.src = imgSource
-        # $('#imgs').appendChild img
+
         Recorder.upload "/tickets/#{ticket.id}/pictures",
           name: "sofish"
           file: imgSource

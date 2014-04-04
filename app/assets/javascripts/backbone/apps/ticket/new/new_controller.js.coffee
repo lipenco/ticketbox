@@ -10,7 +10,9 @@
 
       @listenTo ticket, "created", ->
         console.log "created"
-        @pictureRegion(ticket)
+        App.execute "add:picture:new", ticket
+        @region.close()
+        # @pictureRegion(ticket)
         # id = conference.id
         # App.vent.trigger "conference:created", id, conference
 
@@ -23,8 +25,8 @@
 
       @show formView
 
-    pictureRegion: (ticket)->
-      App.execute "add:picture:new", @region, ticket
+    # pictureRegion: (ticket)->
+    #   App.execute "add:picture:new", @region, ticket
 
     getNewView: (ticket) ->
       new New.Ticket

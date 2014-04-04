@@ -6,6 +6,7 @@
 		sidebarRegion: "#side-menu"
 		headerRegion: "#header-region"
 		mainRegion:		"#main-region"
+		photoRegion:  "#photo-region"
 		# footerRegion: "#footer-region"
 
 

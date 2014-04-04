@@ -1,13 +1,12 @@
-<button id="play" class="button btn">take a picture </button>
+<div id="wrapper" class="col-md-2">
 
-<div id="wrapper">
-    <video controls id="video" src="" width="300"></video>
-    <p>
-<!--       <button id="play">play</button> -->
-<!--       <button id="stop">stop</button> -->
-      <button id="snapshot">snapshot</button>
-    </p>
+    <button id="play">Step 1: Enable Camera</button>
 
-    <ul id="imgs"></ul>
+      <button id="snapshot">Step 2: Take a Picture</button>
+
+</div>
+
+<div id="wrapper" class="col-md-7 col-md-offset-1">
+    <video controls id="video" src="" width="100%"></video>
 
 </div>
