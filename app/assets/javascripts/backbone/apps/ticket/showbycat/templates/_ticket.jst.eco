@@ -1,0 +1,35 @@
+<!-- <li>
+
+  <p><%= @name %></p>
+
+
+<% if @pictures.length: %>
+  <% for picture in @pictures: %>
+    <img src="<%= picture.urll %>">
+  <% end %>
+
+<% else: %>
+  No pictures
+<% end %>
+
+
+</li> -->
+
+
+          <div class="price-table">
+            <section class="head">
+              <h1><%= @name %> </h1>
+              <i class="fa fa-barcode"></i>
+            </section>
+            <section class="contents">
+            <% if @pictures.length: %>
+              <% for picture in @pictures: %>
+                <ul><img class="tickett" src="<%= picture.urll %>"></ul>
+              <% end %>
+
+            <% else: %>
+              <p>No pictures</p>
+            <% end %>
+            </section>
+<!--             <button class="submit showtickets">Show Tickets</button> -->
+          </div>
