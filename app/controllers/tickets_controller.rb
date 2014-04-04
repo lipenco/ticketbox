@@ -5,9 +5,8 @@ class TicketsController < ApplicationController
   respond_to :json
 
   def index
-    @tickets = current_user.tickets.all
-    # binding.pry
-    # @tickets = Ticket.all
+    @category = Category.find params[:category_id]
+    @tickets = @category.tickets
   end
 
   def user_index
