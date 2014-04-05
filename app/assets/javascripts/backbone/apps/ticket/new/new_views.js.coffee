@@ -9,3 +9,9 @@
     form:
       buttons:
         placement: "left"
+
+    onRender: ->
+       @addDayPicker()
+
+    addDayPicker: ->
+      @$el.find('#dp1').datepicker()

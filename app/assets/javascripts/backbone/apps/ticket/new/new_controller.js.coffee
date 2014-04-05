@@ -4,7 +4,8 @@
 
     initialize: (options)->
       {category} = options
-      cat_id = category.id
+      window.uu = category
+      cat_id = category.id.id
       ticket = App.request "new:ticket:entity", cat_id
 
 
@@ -12,13 +13,16 @@
         console.log "created"
         App.execute "add:picture:new", ticket
         @region.close()
-        # @pictureRegion(ticket)
-        # id = conference.id
-        # App.vent.trigger "conference:created", id, conference
+
 
 
       newView = @getNewView ticket
       formView = App.request "form:wrapper", newView
+      # window.f = formView
+      # window.f = formView
+      # formView.$el.find($('#dp1')).datepicker()
+
+      # $('#dp1').datepicker({format: 'mm-dd-yyyy'})
 
       @listenTo newView, "form:cancel", =>
         @region.close()

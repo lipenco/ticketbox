@@ -19,6 +19,7 @@ class TicketsController < ApplicationController
   end
 
   def create
+    binding.pry
     @ticket = @current_user.tickets.new(ticket_params.merge(:category_id => params[:category_id]))
     if @ticket.save
       render "tickets/show"
@@ -57,7 +58,7 @@ class TicketsController < ApplicationController
   end
 
   def ticket_params
-    params.permit(:name, :date, :user_id)
+    params.permit(:name, :date, :user_id, :category_id)
   end
 
 end
