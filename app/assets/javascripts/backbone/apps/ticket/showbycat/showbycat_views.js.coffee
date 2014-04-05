@@ -5,6 +5,10 @@
 
     regions:
       ticketsRegion:		"#tickets-region"
+      titleRegion:      "#title-region"
+
+  class ShowByCat.Title extends App.Views.ItemView
+    template: "ticket/showbycat/_title"
 
 
   class ShowByCat.Ticket extends App.Views.ItemView

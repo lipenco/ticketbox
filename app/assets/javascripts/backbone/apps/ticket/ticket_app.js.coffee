@@ -30,8 +30,9 @@
     API.newTicket region, category
 
   App.vent.on "category:show:tickets", (category) ->
+    id = category.id
     App.navigate Routes.category_tickets_path(category.id)
-    API.showTicketsForCategory category.id, category
+    API.showTicketsForCategory id, category
 
 
 

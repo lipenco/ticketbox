@@ -3,14 +3,16 @@
   class ShowByCat.Controller extends App.Controllers.Application
 
     initialize: (options) ->
-      {id, category} = options
-      # category_id = category.id
+      {category, id} = options
+      id = category.get("id") if category
       tickets = App.request "ticket:entities", id
+      category or= App.request "category:entity", id
 
-      @layout = @getLayoutView tickets
+      @layout = @getLayoutView tickets, category
 
       @listenTo @layout, "show", =>
         @ticketRegion(tickets)
+        @titleRegion(category)
 
       @show @layout, loading: true
 
@@ -22,17 +24,21 @@
         # App.vent.trigger "new:ticket:create"
 
       @show ticketsView, region: @layout.ticketsRegion
-    #
-    # newRegion:(category)->
-    #   App.vent.trigger "new:ticket:create", @layout.newTicketRegion, category
-    #
-    #
-    #
+
+    titleRegion: (category) ->
+      titleView = @getTitleView category
+      @show titleView, region: @layout.titleRegion
+
+    getTitleView: (category) ->
+      new ShowByCat.Title
+        model: category
+
     getTicketsView: (tickets) ->
       new ShowByCat.Tickets
         collection: tickets
 
 
-    getLayoutView: (tickets) ->
+    getLayoutView: (tickets, category) ->
       new ShowByCat.Layout
         collection: tickets
+        model: category

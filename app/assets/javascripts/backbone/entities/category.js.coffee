@@ -2,8 +2,9 @@
 
 
   class Entities.Category extends App.Entities.Model
+    initialize: (@id) ->
 
-    url: -> Routes.categories_path()
+    url: -> "/categories/#{@id}"
 
 
   class Entities.CategoryCollection  extends App.Entities.Collection
@@ -21,6 +22,12 @@
 
 
   API =
+    getCategory: (id) ->
+      category = new Entities.Category(id)
+      category.fetch()
+      category
+
+
     getCategories: ->
       categories = new Entities.CategoryCollection
       categories.fetch
@@ -34,6 +41,9 @@
       categories
 
 
+
+  App.reqres.setHandler "category:entity", (id) ->
+    API.getCategory(id)
 
   App.reqres.setHandler "category:entities", ->
     API.getCategories()
