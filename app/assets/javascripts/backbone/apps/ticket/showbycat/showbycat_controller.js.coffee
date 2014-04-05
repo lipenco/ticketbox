@@ -3,9 +3,9 @@
   class ShowByCat.Controller extends App.Controllers.Application
 
     initialize: (options) ->
-      {category} = options
-      category_id = category.id
-      tickets = App.request "ticket:entities", category_id
+      {id, category} = options
+      # category_id = category.id
+      tickets = App.request "ticket:entities", id
 
       @layout = @getLayoutView tickets
 

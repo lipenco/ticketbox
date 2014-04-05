@@ -4,6 +4,7 @@
   class TicketApp.Router extends Marionette.AppRouter
     appRoutes:
       "tickets": "list"
+      "categories/:id/tickets" : "showTicketsForCategory"
 
 
 
@@ -16,8 +17,9 @@
         region: region
         category: category
 
-    showTicketsForCategory: (category) ->
+    showTicketsForCategory: (id, category) ->
       new TicketApp.ShowByCat.Controller
+        id: id
         category: category
 
 
@@ -29,7 +31,7 @@
 
   App.vent.on "category:show:tickets", (category) ->
     App.navigate Routes.category_tickets_path(category.id)
-    API.showTicketsForCategory category
+    API.showTicketsForCategory category.id, category
 
 
 
