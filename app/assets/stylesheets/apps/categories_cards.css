@@ -230,23 +230,6 @@ h2 {
 
 
 
-.title.headd:after, .title.headd:before {
-content: "";
-display: block;
-width: 13px;
-height: 13px;
-background-color: #5d5d5d;
-position: absolute;
-right: -10px;
-border-radius: 50%;
-z-index: 2000;
-bottom: -7px;
-}
-
-.title.headd:after {
-  left: -10px;
-}
-
 
 .title.headd h1 {
 
@@ -270,4 +253,9 @@ display: inline-block;
 width: 200px;
 display: inline-block;
 padding-top: 10px;
+}
+
+.showall {
+color:#E74C3C;
+
 }
