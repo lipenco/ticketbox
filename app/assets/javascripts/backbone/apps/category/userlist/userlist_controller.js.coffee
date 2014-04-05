@@ -15,8 +15,8 @@
     categoriesRegion: (categories) ->
       categoriesView = @getCategoriesView categories
       @listenTo categoriesView, "childview:category:show:tickets", (child, args) ->
-        category_id = child.model.id
-        App.vent.trigger "category:show:tickets", category_id
+        category = child.model
+        App.vent.trigger "category:show:tickets", category
 
       @show categoriesView, region: @layout.categoriesRegion
 
