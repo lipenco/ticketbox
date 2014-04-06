@@ -14,3 +14,4 @@
     triggers:
       "click #play" : "play:video"
       "click #snapshot" : "take:snapshot"
+      "click #video" : "take:snapshot"

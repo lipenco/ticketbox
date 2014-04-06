@@ -15,7 +15,6 @@
 
 	App.on "initialize:before", (options) ->
 		@currentUser = App.request "set:current:user", options.currentUser
-		# @favorites = App.request "set:current:favorites", options.currentUser
 
 	App.reqres.setHandler "get:current:user", ->
 		App.currentUser

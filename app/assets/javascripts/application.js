@@ -21,7 +21,6 @@
 //= require backbone-chooser
 //= require backbone-routefilter
 //= require snap
-//= require bootstrap-daypicker
 //= require recorder
 //= require_tree ./config
 //= require backbone/app

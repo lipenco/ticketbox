@@ -14,6 +14,7 @@
 
     pictureRegion:(ticket) ->
       pictureView = @getPictureRegion(ticket)
+      # Recorder.play video, "both", ->
 
       @listenTo pictureView, "play:video", =>
         Recorder.play video, "both", ->
