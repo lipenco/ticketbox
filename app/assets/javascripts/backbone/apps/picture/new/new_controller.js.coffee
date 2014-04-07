@@ -33,6 +33,20 @@
           console.log data
           return
 
+      @listenTo pictureView, "stop:recording", =>
+        # video.pause()
+        # video.src=""
+        # localMediaStream.stop()
+        # mediaStream.stop()
+        Recorder.stopWebCam()
+        # video.pause();
+        # localMediaStream.stop();
+        # $('video').fadeOut(1000);
+
+
+
+        # App.photoRegion.close()
+
 
       @show pictureView, region: @layout.pictureRegion
 

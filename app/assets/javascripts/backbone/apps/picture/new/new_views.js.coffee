@@ -12,6 +12,7 @@
     template: "picture/new/_picture"
 
     triggers:
-      "click #play" : "play:video"
+      "click #play" :     "play:video"
       "click #snapshot" : "take:snapshot"
-      "click #video" : "take:snapshot"
+      "click #video" :    "take:snapshot"
+      "click #stop"  :    "stop:recording"
