@@ -34,11 +34,13 @@
           return
 
       @listenTo pictureView, "stop:recording", =>
-        # video.pause()
+        # Recorder.stop();
+        video.pause()
+        stream.stop()
         # video.src=""
         # localMediaStream.stop()
         # mediaStream.stop()
-        Recorder.stopWebCam()
+        # Recorder.stopWebCam(video)
         # video.pause();
         # localMediaStream.stop();
         # $('video').fadeOut(1000);
