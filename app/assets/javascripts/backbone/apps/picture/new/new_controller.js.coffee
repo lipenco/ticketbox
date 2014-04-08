@@ -17,6 +17,7 @@
       # Recorder.play video, "both", ->
 
       @listenTo pictureView, "play:video", =>
+        video.className = "videoo"
         Recorder.play video, "both", ->
 
 
@@ -34,21 +35,9 @@
           return
 
       @listenTo pictureView, "stop:recording", =>
-        # Recorder.stop();
         video.pause()
         stream.stop()
-        # video.src=""
-        # localMediaStream.stop()
-        # mediaStream.stop()
-        # Recorder.stopWebCam(video)
-        # video.pause();
-        # localMediaStream.stop();
-        # $('video').fadeOut(1000);
-
-
-
-        # App.photoRegion.close()
-
+        App.photoRegion.close()
 
       @show pictureView, region: @layout.pictureRegion
 
