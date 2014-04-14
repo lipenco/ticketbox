@@ -33,6 +33,10 @@
           console.log data
           return
 
+      # @listenTo takenView, "childview:delete:picture:clicked", (child, args) ->
+
+
+
 
       @show takenView, region: @layout.takenPicturesRegion
 

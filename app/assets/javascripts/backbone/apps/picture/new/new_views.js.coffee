@@ -18,21 +18,22 @@
     events:
       "mouseover .wrapper" : "showIcons"
       "mouseleave .wrapper" : "showHide"
+      "click .pic-trash" :   "deletePicture"
 
     showIcons: (e) =>
-      console.log "lala"
       window.we = @
       @.$el.find(".icons-hover").addClass("visible")
 
     showHide: (e) =>
       @.$el.find(".icons-hover").removeClass("visible")
 
+    deletePicture: (e) =>
+      @.$el.hide()
 
-      # e.target[0].find(".icons-hover").css("display:block")
 
     triggers:
-      # "click .takenpicture" : "edit:picture:clicked"
       "click .pic-save" : "save:picture:clicked"
+      # "click .pic-trash" : "delete:picture:clicked"
 
   class New.Empty extends App.Views.ItemView
     template: "picture/new/_empty"
