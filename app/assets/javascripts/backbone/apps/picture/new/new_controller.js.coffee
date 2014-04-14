@@ -18,11 +18,22 @@
 
     takenPicturesRegion: (pictures) ->
       takenView = @getTakenPicturesRegion(pictures)
+
+      @listenTo takenView, "childview:edit:picture:clicked", (child, args) ->
+        picture = child.model
+
+
       @show takenView, region: @layout.takenPicturesRegion
+
+
+    editPictureRegion: (picture) ->
+      editPictureView = @getEditPictureView(picture)
+      @show editPictureView, region: @layout.pictureRegion
 
 
     pictureRegion:(ticket, pictures) ->
       pictureView = @getPictureRegion(ticket, pictures)
+
       # Recorder.play video, "both", ->
 
       # @listenTo pictureView, "play:video", =>
@@ -33,21 +44,17 @@
         ticket_id = ticket.id
 
         imgSource = Recorder.snapshot(video)
-        # img = document.createElement("img")
-        # img.src = imgSource
-        # img.className = "new-image"
-        # pictureView.$el.append img
         picture = App.request "new:picture:entity", ticket_id
         picture.set({src: imgSource})
         picture.set({file: imgSource})
         pictures.add(picture)
 
-        Recorder.upload "/tickets/#{ticket.id}/pictures",
-          name: "sofish"
-          file: imgSource
-        , (data) ->
-          console.log data
-          return
+        # Recorder.upload "/tickets/#{ticket.id}/pictures",
+        #   name: "sofish"
+        #   file: imgSource
+        # , (data) ->
+        #   console.log data
+        #   return
 
       @listenTo pictureView, "stop:recording", =>
         video.pause()
@@ -60,6 +67,10 @@
     getTakenPicturesRegion: (pictures) ->
       new New.TakenPictures
         collection: pictures
+
+    getEditPictureView: (picture) ->
+      new New.EditPicture
+        model: picture
 
 
     getPictureRegion: (ticket) ->

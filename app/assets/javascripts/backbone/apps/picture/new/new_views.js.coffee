@@ -13,20 +13,53 @@
   class New.TakenPicture extends App.Views.ItemView
     template: "picture/new/_takenpicture"
     tagName: "li"
-    className: "col-md-4"
+    className: "col-md-3"
+
+    events:
+      "mouseover .takenpicture" : "showIcons"
+      "mouseleave .takenpicture" : "showHide"
+
+    showIcons: (e) =>
+      window.we = @
+      @.$el.children(".icons-hover").addClass("visible")
+
+    showHide: (e) =>
+      @.$el.children(".icons-hover").removeClass("visible")
+
+
+      # e.target[0].find(".icons-hover").css("display:block")
 
     triggers:
-      "click button.showtickets" : "category:show:tickets"
+      "click .takenpicture" : "edit:picture:clicked"
 
   class New.Empty extends App.Views.ItemView
     template: "picture/new/_empty"
     tagName:  "li"
+
+
 
   class New.TakenPictures extends App.Views.CompositeView
     template: "picture/new/_takenpictures"
     itemView: New.TakenPicture
     emptyView: New.Empty
     itemViewContainer: "ul"
+
+
+  class New.EditPicture extends App.Views.ItemView
+    template: "picture/new/_edit"
+
+    # onShow:->
+    #   @editPicture()
+    #
+    # editPicture: ->
+    #   @$el.find('img').cropper
+    #     file: $('img').src
+    #     bgColor: '#fff'
+    #     maxSize: [320, 240]
+    #     minSize: [100, 100]
+    #     aspectRatio: 1
+    #     onSelect: (coords) ->
+    #       @$el.find('img').fileapi('crop', imageFile, coords);
 
 
 

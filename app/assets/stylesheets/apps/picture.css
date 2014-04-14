@@ -1,0 +1,29 @@
+img.takenpicture {
+
+width: 100%;
+margin: 30px auto;
+}
+
+
+.icons-hover {
+display:none;
+width: 100%;
+background-image: #0000000;
+
+position: absolute;
+top: 40%;
+left: 30%;
+}
+
+.icons-hover.visible {
+display:block;
+z-index: 99;
+font-size: 2em;
+}
+
+.pic-trash, .pic-save {
+display: inline-block;
+font-size: 1,5em;
+padding: 15px;
+color: #ffffff;
+}
