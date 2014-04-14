@@ -16,15 +16,16 @@
     className: "col-md-3"
 
     events:
-      "mouseover .takenpicture" : "showIcons"
-      "mouseleave .takenpicture" : "showHide"
+      "mouseover .wrapper" : "showIcons"
+      "mouseleave .wrapper" : "showHide"
 
     showIcons: (e) =>
+      console.log "lala"
       window.we = @
-      @.$el.children(".icons-hover").addClass("visible")
+      @.$el.find(".icons-hover").addClass("visible")
 
     showHide: (e) =>
-      @.$el.children(".icons-hover").removeClass("visible")
+      @.$el.find(".icons-hover").removeClass("visible")
 
 
       # e.target[0].find(".icons-hover").css("display:block")

@@ -1,11 +1,10 @@
 
 
-
-
+<div class="wrapper" >
   <img class="takenpicture" src="<%= @src %>">
   <div class="icons-hover">
     <div class="pic-save"><span class="glyphicon glyphicon-plus"></span></div>
     <div class="pic-trash"><span class="glyphicon glyphicon-trash
      glyphicon"></span></div>
-
   </div>
+</div>
