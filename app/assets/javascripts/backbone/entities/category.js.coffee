@@ -48,5 +48,6 @@
   App.reqres.setHandler "category:entities", ->
     API.getCategories()
 
+
   App.reqres.setHandler "category:popular:entities", ->
     API.getPopularCategories()

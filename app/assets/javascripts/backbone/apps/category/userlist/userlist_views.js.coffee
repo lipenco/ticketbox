@@ -25,3 +25,6 @@
     itemView: UserList.Category
     emptyView: UserList.Empty
     itemViewContainer: "ul"
+
+    triggers:
+      "click .showall" : "category:show:all"
