@@ -16,3 +16,11 @@
       "click #snapshot" : "take:snapshot"
       "click #video" :    "take:snapshot"
       "click #stop"  :    "stop:recording"
+
+    onShow:->
+      @playVideo()
+
+    playVideo: ->
+      # window.elll = @$el.find("#video")
+      # video = @$el.find("#video")
+      Recorder.play video, "both", ->
