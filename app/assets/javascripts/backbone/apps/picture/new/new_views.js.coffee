@@ -31,7 +31,8 @@
       # e.target[0].find(".icons-hover").css("display:block")
 
     triggers:
-      "click .takenpicture" : "edit:picture:clicked"
+      # "click .takenpicture" : "edit:picture:clicked"
+      "click .pic-save" : "save:picture:clicked"
 
   class New.Empty extends App.Views.ItemView
     template: "picture/new/_empty"

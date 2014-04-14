@@ -19,8 +19,19 @@
     takenPicturesRegion: (pictures) ->
       takenView = @getTakenPicturesRegion(pictures)
 
-      @listenTo takenView, "childview:edit:picture:clicked", (child, args) ->
+      # @listenTo takenView, "childview:edit:picture:clicked", (child, args) ->
+      #   picture = child.model
+
+      @listenTo takenView, "childview:save:picture:clicked", (child, args) ->
         picture = child.model
+        window.pp = picture
+        file = picture.get("file")
+        Recorder.upload "/tickets/#{picture.ticket_id}/pictures",
+          name: "sofish"
+          file: file
+        , (data) ->
+          console.log data
+          return
 
 
       @show takenView, region: @layout.takenPicturesRegion
@@ -41,6 +52,7 @@
       #   Recorder.play video, "both", ->
 
       @listenTo pictureView, "take:snapshot", =>
+        window.tic = ticket
         ticket_id = ticket.id
 
         imgSource = Recorder.snapshot(video)
