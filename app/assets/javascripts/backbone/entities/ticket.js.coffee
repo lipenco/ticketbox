@@ -11,9 +11,9 @@
   class Entities.PictureCollection  extends App.Entities.Collection
 
     model: Entities.Picture
-    initialize: (@id) ->
+    initialize: (@ticket_id) ->
 
-    url: -> "/tickets/#{@id}/pictures"
+    url: -> "/tickets/#{@ticket_id}/pictures"
 
   class Entities.Ticket extends App.Entities.Model
 
@@ -56,11 +56,22 @@
     newTicket: (cat_id)->
       new Entities.Ticket(cat_id)
 
+    newPicture: (ticket_id)->
+      new Entities.Picture(ticket_id)
+
+    newPictures: (ticket_id)->
+      new Entities.PictureCollection(ticket_id)
+
 
   App.reqres.setHandler "ticket:entities", (category_id) ->
     cat_id = category_id
     API.getTickets(cat_id)
 
+  App.reqres.setHandler "new:picture:entity",(ticket_id) ->
+    API.newPicture(ticket_id)
+
+  App.reqres.setHandler "new:picture:entities",(ticket_id) ->
+    API.newPictures(ticket_id)
 
   App.reqres.setHandler "new:ticket:entity",(cat_id) ->
     API.newTicket(cat_id)
