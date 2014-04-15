@@ -1,19 +1,4 @@
-<!-- <li>
 
-  <p><%= @name %></p>
-
-
-<% if @pictures.length: %>
-  <% for picture in @pictures: %>
-    <img src="<%= picture.urll %>">
-  <% end %>
-
-<% else: %>
-  No pictures
-<% end %>
-
-
-</li> -->
 
 
           <div class="price-table">
@@ -31,5 +16,4 @@
               <p>No pictures</p>
             <% end %>
             </section>
-<!--             <button class="submit showtickets">Show Tickets</button> -->
           </div>

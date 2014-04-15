@@ -21,6 +21,7 @@
 //= require backbone-chooser
 //= require backbone-routefilter
 //= require snap
+//= require isotope
 //= require recorder
 //= require_tree ./config
 //= require backbone/app

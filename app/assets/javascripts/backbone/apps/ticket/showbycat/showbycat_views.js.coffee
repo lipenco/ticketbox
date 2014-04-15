@@ -24,8 +24,20 @@
     template: "ticket/showbycat/_empty"
     tagName:  "li"
 
+
+
   class ShowByCat.Tickets extends App.Views.CompositeView
     template: "ticket/showbycat/_tickets"
     itemView: ShowByCat.Ticket
     emptyView: ShowByCat.Empty
     itemViewContainer: "ul"
+    # @$el.on "DOMNodeInserted", (evt) ->
+    #   @childElementsFadeIn()
+
+    onRender: ->
+       @childElementsFadeIn()
+
+    childElementsFadeIn: ->
+      container = @$el
+      container.isotope
+        itemSelector: "li"

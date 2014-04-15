@@ -6,7 +6,7 @@ class TicketsController < ApplicationController
 
   def index
     @category = Category.find params[:category_id]
-    @tickets = @category.tickets
+    @tickets = @category.tickets.order(id: :desc)
   end
 
   def user_index
