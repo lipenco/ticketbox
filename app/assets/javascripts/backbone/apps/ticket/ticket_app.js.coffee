@@ -22,9 +22,11 @@
         id: id
         category: category
 
+    showTicketsTaken: (category_id) ->
+      new TicketApp.ShowByCat.Controller
+        id: category_id
 
-  # App.commands.setHandler "new:ticket:create", (region) ->
-  #   API.newTicket region
+
 
   App.vent.on "new:ticket:create", (region, category) ->
     API.newTicket region, category
@@ -33,6 +35,11 @@
     id = category.id
     App.navigate Routes.category_tickets_path(category.id)
     API.showTicketsForCategory id, category
+
+  App.vent.on "category:show:ticketstaken", (category_id) ->
+    App.navigate Routes.category_tickets_path(category_id)
+    API.showTicketsTaken category_id
+
 
 
 

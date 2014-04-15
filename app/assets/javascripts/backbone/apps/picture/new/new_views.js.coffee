@@ -8,6 +8,9 @@
       pictureRegion:	"#picture-region"
       takenPicturesRegion: "#taken-pictures-region"
 
+    triggers:
+      "click #stop"  :    "stop:recording"
+
 
 
   class New.TakenPicture extends App.Views.ItemView
@@ -50,21 +53,6 @@
 
   class New.EditPicture extends App.Views.ItemView
     template: "picture/new/_edit"
-
-    # onShow:->
-    #   @editPicture()
-    #
-    # editPicture: ->
-    #   @$el.find('img').cropper
-    #     file: $('img').src
-    #     bgColor: '#fff'
-    #     maxSize: [320, 240]
-    #     minSize: [100, 100]
-    #     aspectRatio: 1
-    #     onSelect: (coords) ->
-    #       @$el.find('img').fileapi('crop', imageFile, coords);
-
-
 
 
   class New.Picture extends App.Views.ItemView

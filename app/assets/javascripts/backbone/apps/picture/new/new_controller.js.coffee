@@ -5,6 +5,7 @@
     initialize: (options) ->
       {ticket} = options
       ticket_id = ticket.id
+      App.mainRegion.close()
       pictures = App.request "new:picture:entities", ticket_id
 
       @layout = @getLayoutView ticket
@@ -12,6 +13,14 @@
       @listenTo @layout, "show", =>
         @pictureRegion(ticket, pictures)
         @takenPicturesRegion(pictures)
+
+      @listenTo @layout, "stop:recording", =>
+        category_id  = ticket.cat_id
+        console.log category_id
+        video.pause()
+        stream.stop()
+        App.photoRegion.close()
+        App.vent.trigger "category:show:ticketstaken", category_id
 
       App.photoRegion.show @layout
 
@@ -65,17 +74,10 @@
         picture.set({file: imgSource})
         pictures.add(picture)
 
-        # Recorder.upload "/tickets/#{ticket.id}/pictures",
-        #   name: "sofish"
-        #   file: imgSource
-        # , (data) ->
-        #   console.log data
-        #   return
-
-      @listenTo pictureView, "stop:recording", =>
-        video.pause()
-        stream.stop()
-        App.photoRegion.close()
+      # @listenTo pictureView, "stop:recording", =>
+      #   video.pause()
+      #   stream.stop()
+      #   App.photoRegion.close()
 
       @show pictureView, region: @layout.pictureRegion
 

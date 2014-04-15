@@ -6,7 +6,7 @@
   <p>
     <label class="">What the date?</label>
 <!--     <input type="text" name="date" placeholder="Datetoday of Event" /> -->
-    <input type="text" name="date"  class="span2" value="Today" id="dp1">
+    <input type="text" name="date"  class="span2" value="" id="dp1">
   </p>
 
 

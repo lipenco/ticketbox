@@ -4,6 +4,11 @@ width: 100%;
 margin: 30px auto;
 }
 
+#photo-region {
+padding-top: 40px;
+
+}
+
 
 .icons-hover {
 display:none;

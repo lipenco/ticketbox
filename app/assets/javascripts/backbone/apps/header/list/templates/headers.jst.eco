@@ -1,8 +1,7 @@
 
 <div class="container">
-
-<div class="header">
-    <ul class="nav nav-pills pull-right"></ul>
-  <h3 class="text-muted"><a class="left-open" href="">&#9776;</a> Ticket Box - your experience digitalized</h3>
-</div>
+    <div class="header">
+        <ul class="nav nav-pills pull-right"></ul>
+        <div id="faded-logo-header" class=" col-md-2 ">TICKET BOX</div>
+    </div>
 </div>

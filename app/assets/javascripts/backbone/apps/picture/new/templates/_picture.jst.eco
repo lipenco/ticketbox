@@ -1,9 +1,3 @@
-<div id="wrapper" class="col-md-2">
-
-<!--     <button id="play"><span class="glyphicon glyphicon-camera"></span>Start Recording</button> -->
-    <button id="stop"><span class="glyphicon glyphicon-remove"></span><p>Stop</p></button>
-
-</div>
 
 
 <div id="wrapper" class="col-md-7 col-md-offset-1">

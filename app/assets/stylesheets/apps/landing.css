@@ -21,6 +21,20 @@ font-weight: 100;
 letter-spacing:3px;
 }
 
+#faded-logo-header {
+
+  font-size: 1.3em;
+  border: 2px solid #48c9b0;
+  padding: 10px;
+  padding-left: 15px;
+  color: #fff;
+  background:#48c9b0;
+  width: 155px;
+  font-weight: 100;
+  letter-spacing:3px;
+
+}
+
 .headline {
   background:rgba(255,255,255,0.7);
   text-align: center;
@@ -54,7 +68,7 @@ p.secondline {
 }
 
 #icons-section {
-  background-color: #48c9b0;
+  background-color: #edeff1;
   padding: 15px 5px 45px ;
   text-align: center;
 }
