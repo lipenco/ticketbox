@@ -3,6 +3,7 @@
   class Show.Controller extends App.Controllers.Application
 
     initialize: ->
+      App.headerRegion.close()
       @layout = @getLayoutView()
 
       @listenTo @layout, "show", =>

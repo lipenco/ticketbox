@@ -1,0 +1,147 @@
+.wrapper-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+
+}
+
+
+#faded-logo {
+font-size: 1em;
+border: 2px solid #48c9b0;
+padding: 10px;
+color: #fff;
+margin-top: 60px;
+margin-bottom: 50px;
+background:#48c9b0;
+width: 210px;
+font-weight: 100;
+letter-spacing:3px;
+}
+
+.headline {
+  background:rgba(255,255,255,0.7);
+  text-align: center;
+  font-size: 1.9em;
+  line-height: 1.7em;
+  padding: 25px;
+  color: #48c9b0;
+  font-weight: 100;
+
+
+}
+
+p.secondline {
+  font-weight: 400;
+  font-size: 0.6em;
+  line-height: 1.2em;
+
+}
+
+#home-bg {
+  background: url('/assets/giff.gif') center top;
+  background-size: cover;
+  background-attachment: fixed;
+  /*margin-top: 90px;*/
+  padding-top: 100px;
+  padding-bottom: 520px;
+   filter: sepia; /* IE6-9 */
+    -webkit-filter: sepia(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+#icons-section {
+  background-color: #48c9b0;
+  padding: 15px 5px 45px ;
+  text-align: center;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+#circle1, #circle2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  height: 150px;
+  width: 150px;
+  background-color: transparent;
+  border-radius: 200px;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+  top: 15px;
+  text-align: center;
+  line-height: 150px;
+  left: 125px;
+  z-index: 5;
+  margin-left: 30px;
+
+}
+
+#circle1:hover{
+  -webkit-transform: translateX(200%)
+    rotate(360deg);
+  transform: translateX(200%)
+    rotate(360deg);
+}
+
+#circle2:hover{
+  -webkit-transform: translateX(-200%)
+    rotate(-360deg);
+  transform: translateX(-200%)
+    rotate(-360deg);
+}
+
+
+
+
+
+h2 {
+	font-weight: 400;
+}
+
+#highlights {
+	line-height: 1.5em;
+}
+
+#highlights-text {
+	min-height: 96px;
+	font-size: 1.1em;
+}
+
+
+
+#home {
+	font-weight: 300;
+	color: white;
+	font-size: 2em;
+	line-height: 1.5em;
+}
+
+/** highlights select bar **/
+#highlights-slider {
+	position: relative;
+}
+#highlights-slider .flex-direction-nav a:before {
+	color: #64b0af;
+}
+
+#highlights-slider li {
+	/*border: 1px solid red;*/
+}
+
+.selectbar {
+	width: 190px;
+	height: 4px;
+	margin: 0 auto;
+}
+.selectbar.active {
+	background-color: #64b0af;
+}
