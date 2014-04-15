@@ -1,19 +1,19 @@
-
-
-
-          <div class="price-table">
+      <div class="price-table">
             <section class="head">
               <h1><%= @name %> </h1>
               <i class="fa fa-barcode"></i>
             </section>
             <section class="contents">
+
             <% if @pictures.length: %>
+            <ul>
               <% for picture in @pictures: %>
-                <ul><img class="tickett" src="<%= picture.urll %>"></ul>
+                <li><img class="tickett" src="<%= picture.urll %>"></li>
               <% end %>
+            </ul>
 
             <% else: %>
               <p>No pictures</p>
             <% end %>
-            </section>
-          </div>
+          </section>
+      </div>

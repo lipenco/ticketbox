@@ -14,7 +14,7 @@
   class ShowByCat.Ticket extends App.Views.ItemView
     template: "ticket/showbycat/_ticket"
     tagName: "li"
-    className: "col-md-3"
+    className: "ticket_li col-md-3"
 
     triggers:
       "click .ticket-delete button" : "ticket:delete:clicked"
@@ -31,13 +31,12 @@
     itemView: ShowByCat.Ticket
     emptyView: ShowByCat.Empty
     itemViewContainer: "ul"
-    # @$el.on "DOMNodeInserted", (evt) ->
-    #   @childElementsFadeIn()
 
-    onRender: ->
-       @childElementsFadeIn()
+    onShow: ->
+      @childElementsFadeIn()
 
     childElementsFadeIn: ->
       container = @$el
       container.isotope
-        itemSelector: "li"
+        layoutMode : 'masonry'
+        itemSelector: ".ticket_li"
