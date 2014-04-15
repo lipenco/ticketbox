@@ -3,18 +3,22 @@
   class List.Controller extends App.Controllers.Application
 
     initialize: ->
-      tickets = App.request "category:entities"
+      currentUser = App.request "get:current:user"
+      currentUserId = currentUser.get("id")
+      if currentUserId
+        tickets = App.request "category:entities"
+        @layout = @getLayoutView tickets
 
-      @layout = @getLayoutView tickets
+        @listenTo @layout, "close", @close
 
-      @listenTo @layout, "close", @close
+        @listenTo @layout, "show", =>
+          @addToCatRegion()
+          @userCategoriesRegion()
 
-      @listenTo @layout, "show", =>
-        @addToCatRegion()
-        @userCategoriesRegion()
-        # @ticketsRegion tickets
+        @show @layout, loading: true
+      else
+        App.vent.trigger "landing:page:show"
 
-      @show @layout, loading: true
 
 
 
