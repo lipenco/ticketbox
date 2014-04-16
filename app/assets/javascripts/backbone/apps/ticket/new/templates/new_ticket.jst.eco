@@ -1,9 +1,11 @@
 
+
+
   <p>
-    <label class="">What is the name of the Even?</label>
+<!--     <label class="">What is the name of the Even?</label> -->
     <input type="text" name="name" placeholder="Ticket Name" />
   </p>
   <p>
-    <label class="">What the date?</label>
+<!--     <label class="">What the date?</label> -->
     <input type="text" name="date"  class="span2" value="" id="dp1">
   </p>

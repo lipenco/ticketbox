@@ -17,6 +17,8 @@
  //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
  //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
  */
+
+
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
 body {
@@ -39,8 +41,13 @@ padding-bottom: 20px;
 }
 
 
+
 video.videoo {
  cursor: url(curr.png), auto;
+  width: 60%;
+  margin-left: 18%;
+  margin-top: 40px;
+  display:block;
 }
 
 
@@ -78,4 +85,11 @@ padding-bottom: 0;
 
 a:hover {
   text-decoration:none
+}
+
+
+#new-ticket-region {
+width:210px;
+margin-left: -30px;
+
 }

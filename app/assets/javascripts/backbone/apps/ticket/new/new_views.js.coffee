@@ -6,9 +6,6 @@
     modelEvents:
       "created" : "render"
 
-    form:
-      buttons:
-        placement: "left"
 
     onRender: ->
        @addDayPicker()

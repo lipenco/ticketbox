@@ -24,7 +24,6 @@
       "click .pic-trash" :   "deletePicture"
 
     showIcons: (e) =>
-      window.we = @
       @.$el.find(".icons-hover").addClass("visible")
 
     showHide: (e) =>
@@ -59,7 +58,6 @@
     template: "picture/new/_picture"
 
     triggers:
-      # "click #play" :     "play:video"
       "click #snapshot" : "take:snapshot"
       "click #video" :    "take:snapshot"
       "click #stop"  :    "stop:recording"
@@ -68,6 +66,5 @@
       @playVideo()
 
     playVideo: ->
-      # window.elll = @$el.find("#video")
       @$el.find("#video").addClass("videoo")
       Recorder.play video, "both", ->

@@ -1,6 +1,11 @@
 
 
-<div id="wrapper" class="col-md-7 col-md-offset-1">
-    <video  id="video" autoplay="autoplay" src="" width="100%"></video>
+<div id="wrapper" class="container">
+    <video  id="video" autoplay="autoplay" src=""></video>
+
+      <div class="flat-anim animation">
+      	<span class="eye"></span>
+      	<span class="bottom"></span>
+      </div>
 
 </div>

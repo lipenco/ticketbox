@@ -18,19 +18,13 @@
 
       newView = @getNewView ticket
       formView = App.request "form:wrapper", newView
-      # window.f = formView
-      # window.f = formView
-      # formView.$el.find($('#dp1')).datepicker()
 
-      # $('#dp1').datepicker({format: 'mm-dd-yyyy'})
 
       @listenTo newView, "form:cancel", =>
         @region.close()
 
       @show formView
 
-    # pictureRegion: (ticket)->
-    #   App.execute "add:picture:new", @region, ticket
 
     getNewView: (ticket) ->
       new New.Ticket

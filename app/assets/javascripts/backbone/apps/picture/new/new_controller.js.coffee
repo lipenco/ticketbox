@@ -16,7 +16,6 @@
 
       @listenTo @layout, "stop:recording", =>
         category_id  = ticket.cat_id
-        console.log category_id
         video.pause()
         stream.stop()
         App.photoRegion.close()
@@ -58,12 +57,6 @@
     pictureRegion:(ticket, pictures) ->
       pictureView = @getPictureRegion(ticket, pictures)
 
-      # Recorder.play video, "both", ->
-
-      # @listenTo pictureView, "play:video", =>
-      #   video.className = "videoo"
-      #   Recorder.play video, "both", ->
-
       @listenTo pictureView, "take:snapshot", =>
         window.tic = ticket
         ticket_id = ticket.id
@@ -73,11 +66,6 @@
         picture.set({src: imgSource})
         picture.set({file: imgSource})
         pictures.add(picture)
-
-      # @listenTo pictureView, "stop:recording", =>
-      #   video.pause()
-      #   stream.stop()
-      #   App.photoRegion.close()
 
       @show pictureView, region: @layout.pictureRegion
 
