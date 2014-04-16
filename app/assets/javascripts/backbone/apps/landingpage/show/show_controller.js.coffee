@@ -14,6 +14,9 @@
 
     landingRegion: ->
       landingView = @getLandingView()
+      @listenTo landingView, "open:menu:clicked", ->
+        snapper.open('left')
+
       @layout.landingRegion.show landingView
 
 

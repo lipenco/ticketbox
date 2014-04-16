@@ -12,4 +12,4 @@
     template: "landingpage/show/_landing"
 
     triggers:
-      "click #faded-logo" : "open:menu:clicked"
+      "click .wrapper-top" : "open:menu:clicked"

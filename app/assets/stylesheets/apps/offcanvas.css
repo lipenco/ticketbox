@@ -85,7 +85,7 @@ html, body {
 	display: none;
 }
 
-/* Show the "Drag" background in the demo */
+/* Show the "Drag" ground in the demo */
 #content {
 }
 
@@ -226,7 +226,7 @@ html, body {
 }
 
 .snap-drawer {
-	background: #323949;
+	background: #16A085;
 	color: #eee;
 }
 
