@@ -11,5 +11,5 @@
   class Show.Landing extends App.Views.ItemView
     template: "landingpage/show/_landing"
 
-    # triggers:
-    #   "click #close-menu" : "close:button:clicked"
+    triggers:
+      "click #faded-logo" : "open:menu:clicked"

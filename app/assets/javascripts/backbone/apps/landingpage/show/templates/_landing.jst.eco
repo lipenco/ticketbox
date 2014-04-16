@@ -1,19 +1,25 @@
 
 <section id="home">
-  <div class="row wrapper-top">
-      <div class="col-md-10 col-md-offset-1 headline"><p>
+  <div class="row container wrapper-top col-md-offset-1">
+      <div class="col-md-8 col-md-offset-2 headline"><p>
         Don't forget to remember</p>
         <p class="secondline"> Your Tickets Collection Degitalized</p>
       </div>
-      <div id="faded-logo" class="text-center col-md-2 col-md-offset-5">TICKET BOX</div>
-  </div>
+      <div id="faded-logo" class="col-md-3">
+<!--         <span class="small">START YOUR</span> -->
+        <p>TICKET BOX</p></div>
+       </div>
+       <div>
+
+
+    </div>
 
 	<div id="home-bg">
 	</div>
 </section>
 
 <section id="icons-section">
-	<div class="row">
+	<div class="row container">
 
 
       <div id="circle1" class="col-md-3 col-md-offset-1">
@@ -36,19 +42,3 @@
    </div>
 
 	</div>
-</section>
-
-		<div class="row">
-			<div class="large-12 columns text-center">
-				<div id="footer">
-					<div id="copy-text">&copy;&nbsp;&nbsp;<span class="logo-text">Lipen.co</span>&nbsp;&nbsp;2014</div>
-				</div>
-			</div>
-		</div>
-
-	</div><!-- end of contact holder -->
-
-
-
-
-</section>
