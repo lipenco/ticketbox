@@ -15,3 +15,8 @@
 
     addDayPicker: ->
       @$el.find('#dp1').datepicker()
+      d = new Date()
+      curr_date = d.getDate()
+      curr_month = d.getMonth() + 1
+      curr_year = d.getFullYear()
+      @$el.find('#dp1').val(curr_date + "-" + curr_month + "-" + curr_year)
