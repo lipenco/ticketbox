@@ -1,7 +1,4 @@
 
-<div class="container">
-    <div class="header">
-        <ul class="nav nav-pills pull-right"></ul>
-        <div id="faded-logo-header" class=" col-md-2 ">TICKET BOX</div>
-    </div>
+<div class="header">
+    <div id="faded-logo-header" class=" col-md-2 ">TICKET BOX</div>
 </div>
