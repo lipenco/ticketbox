@@ -207,7 +207,7 @@ h2 {
   line-height: 2;
   font-weight: 300;
   color: #e6e6e6;
-  margin-bottom: 70px;
+  padding-bottom: 10px;
 }
 .contents li {
   list-style: none;
@@ -250,8 +250,7 @@ display: inline-block;
 }
 
 .tickett {
-width: 200px;
-height: 150px;
+width: 100%;
 display: inline-block;
 padding-top: 10px;
 }
@@ -259,4 +258,18 @@ padding-top: 10px;
 .showall {
 color:#E74C3C;
 
+}
+
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+border:none;
+outline:none;
+}
+
+.edit-document {
+letter-spacing: .01rem;
+font-weight: 100;
+font-style: normal;
+font-size: 22px;
+line-height: 1.5;
 }
