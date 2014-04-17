@@ -1,1 +1,11 @@
-<p> click on video to tak a picture </p>
+
+<div class="image">
+  <div class="wrapper" >
+    <p> no photos</p>
+    <div class="icons-hover">
+      <div class="pic-save"><span class="glyphicon glyphicon-plus"></span></div>
+      <div class="pic-trash"><span class="glyphicon glyphicon-trash
+       glyphicon"></span></div>
+    </div>
+</div>
+</div>

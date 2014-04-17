@@ -1,11 +1,8 @@
 
+<video  id="video" autoplay="autoplay" src=""></video>
 
-<div id="wrapper" class="container">
-    <video  id="video" autoplay="autoplay" src=""></video>
 
-      <div class="flat-anim animation">
-      	<span class="eye"></span>
-      	<span class="bottom"></span>
-      </div>
-
+<div class="flat-anim animation">
+	<span class="eye"></span>
+	<span class="bottom"></span>
 </div>

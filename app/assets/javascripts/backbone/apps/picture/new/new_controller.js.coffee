@@ -17,7 +17,7 @@
       @listenTo @layout, "stop:recording", =>
         category_id  = ticket.cat_id
         video.pause()
-        stream.stop()
+        stream.stop() if window.stream
         App.photoRegion.close()
         App.vent.trigger "category:show:ticketstaken", category_id
 

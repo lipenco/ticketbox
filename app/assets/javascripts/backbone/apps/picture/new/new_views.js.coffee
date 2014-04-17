@@ -16,7 +16,7 @@
   class New.TakenPicture extends App.Views.ItemView
     template: "picture/new/_takenpicture"
     tagName: "li"
-    className: "col-md-3"
+    className: "col-md-4"
 
     events:
       "mouseover .wrapper" : "showIcons"
@@ -37,9 +37,12 @@
       "click .pic-save" : "save:picture:clicked"
       # "click .pic-trash" : "delete:picture:clicked"
 
+
   class New.Empty extends App.Views.ItemView
     template: "picture/new/_empty"
     tagName:  "li"
+    className: "col-md-4"
+
 
 
 
