@@ -7,16 +7,21 @@
     regions:
       pictureRegion:	"#picture-region"
       takenPicturesRegion: "#taken-pictures-region"
+      ticketPrevRegion: "#ticket-prev-region"
 
     triggers:
       "click #stop"  :    "stop:recording"
+
+
+  class New.TicketPrev extends App.Views.ItemView
+    template: "picture/new/_ticketprev"
 
 
 
   class New.TakenPicture extends App.Views.ItemView
     template: "picture/new/_takenpicture"
     tagName: "li"
-    className: "col-md-4"
+    className: "col-md-12"
 
     events:
       "mouseover .wrapper" : "showIcons"
@@ -41,7 +46,7 @@
   class New.Empty extends App.Views.ItemView
     template: "picture/new/_empty"
     tagName:  "li"
-    className: "col-md-4"
+    className: "col-md-12"
 
 
 

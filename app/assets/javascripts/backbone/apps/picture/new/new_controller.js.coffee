@@ -6,13 +6,15 @@
       {ticket} = options
       ticket_id = ticket.id
       App.mainRegion.close()
-      pictures = App.request "new:picture:entities", ticket_id
+      pictures = new Backbone.Collection([])
+      window.coll = pictures
 
       @layout = @getLayoutView ticket
 
       @listenTo @layout, "show", =>
         @pictureRegion(ticket, pictures)
         @takenPicturesRegion(pictures)
+        @ticketPrevRegion(ticket)
 
       @listenTo @layout, "stop:recording", =>
         category_id  = ticket.cat_id
@@ -22,6 +24,11 @@
         App.vent.trigger "category:show:ticketstaken", category_id
 
       App.photoRegion.show @layout
+
+
+    ticketPrevRegion: (ticket) ->
+      prevView = @getPrevRegion(ticket)
+      @show prevView, region: @layout.ticketPrevRegion
 
 
     takenPicturesRegion: (pictures) ->
@@ -77,6 +84,10 @@
     getEditPictureView: (picture) ->
       new New.EditPicture
         model: picture
+
+    getPrevRegion: (ticket) ->
+      new New.TicketPrev
+        model: ticket
 
 
     getPictureRegion: (ticket) ->
