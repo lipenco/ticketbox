@@ -43,11 +43,16 @@ padding-bottom: 20px;
 
 
 video.videoo {
- cursor: url(curr.png), auto;
   width: 60%;
   margin-left: 18%;
   margin-top: 40px;
-  display:block;
+  display:none;
+}
+
+video.active {
+cursor: url(curr.png), auto;
+display:block;
+
 }
 
 
