@@ -34,6 +34,10 @@
 
 
 
+  App.vent.on "goto:home:page",  ->
+    API.list()
+    App.navigate Routes.tickets_path()
+
   App.vent.on "new:ticket:create", (region, category) ->
     API.newTicket region, category
 

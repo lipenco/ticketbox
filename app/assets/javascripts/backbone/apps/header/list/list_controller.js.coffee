@@ -3,11 +3,10 @@
   List.Controller =
 
     listHeader: ->
-
       headerView = @getHeaderView()
 
-      # @listenTo headerView, "nav:open:sidemenu", ->
-      #   snapper.expand('left')
+
+          # App.vent.trigger "goto:homepage"
 
       App.headerRegion.show headerView
 

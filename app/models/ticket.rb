@@ -4,6 +4,6 @@ class Ticket < ActiveRecord::Base
   has_many :pictures
 
   def date
-    self[:date] || Date.today
+    self[:date] ||= Date.today
   end
 end
