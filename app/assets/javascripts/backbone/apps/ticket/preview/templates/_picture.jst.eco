@@ -1,1 +1,9 @@
-<li><img class="tickett" src="<%= picture.urll %>"></li>
+<div class="image">
+  <div class="wrapper" >
+    <img class="takenpicture"  src="<%= @src %>">
+    <div class="icons-hover">
+      <div class="pic-trash"><span class="glyphicon glyphicon-trash
+       glyphicon"></span></div>
+    </div>
+  </div>
+</div>

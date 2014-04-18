@@ -3,16 +3,15 @@
   class Prev.Controller extends App.Controllers.Application
 
     initialize: (options)->
-      {ticket} = options
+      {ticket, pictures} = options
+      window.pic = pictures
 
       @layout = @getLayoutView ticket
 
       @listenTo @layout, "show", =>
         @nameRegion(ticket)
         @descriptionRegion(ticket)
-        @picturesRegion(ticket)
-        # @ticketRegion(ticket)
-        # @picturesRegion(ticket)
+        @picturesRegion(ticket, pictures)
 
       @show @layout, loading: true
 
@@ -20,8 +19,12 @@
       nameView = @getNameView ticket
       @show nameView, region: @layout.nameRegion
 
-    picturesRegion: (ticket) ->
-      picturesView = @getPicturesView ticket
+    picturesRegion: (ticket, pictures) ->
+      picturesView = @getPicturesView ticket, pictures
+
+      @listenTo picturesView, "childview:delete:picture:clicked", (child, args) ->
+        console.log "clikcer"
+
       @show picturesView, region: @layout.picturesRegion
 
 
@@ -44,8 +47,8 @@
       new Prev.Description
         model: ticket
 
-    getPicturesView: (ticket) ->
-      pictures = ticket.get("pictures")
+    getPicturesView: (ticket, pictures) ->
+      window.pp = pictures
       new Prev.Pictures
         model: ticket
         collection: pictures
@@ -57,6 +60,8 @@
         model: ticket
 
 
-    getLayoutView: (ticket) ->
+    getLayoutView: (ticket, pictures) ->
+      window.we = ticket
       new Prev.Layout
         model: ticket
+        collection: pictures

@@ -17,10 +17,11 @@
         region: region
         category: category
 
-    previewTicket: (region, ticket) ->
+    previewTicket: (region, ticket, pictures) ->
       new TicketApp.Prev.Controller
         region: region
         ticket: ticket
+        pictures: pictures
 
     showTicketsForCategory: (id, category) ->
       new TicketApp.ShowByCat.Controller
@@ -45,8 +46,8 @@
     App.navigate Routes.category_tickets_path(category_id)
     API.showTicketsTaken category_id
 
-  App.vent.on "preview:ticket:show", (region, ticket) ->
-    API.previewTicket region, ticket
+  App.vent.on "preview:ticket:show", (region, ticket, pictures) ->
+    API.previewTicket region, ticket, pictures
 
 
 

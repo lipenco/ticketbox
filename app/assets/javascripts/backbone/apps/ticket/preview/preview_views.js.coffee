@@ -28,6 +28,20 @@
     template: "ticket/preview/_picture"
     tagName: "li"
 
+    events:
+      "mouseover .wrapper" : "showIcons"
+      "mouseleave .wrapper" : "showHide"
+      "click .pic-trash" :   "deletePicture"
+
+    showIcons: (e) =>
+      @.$el.find(".icons-hover").addClass("visible")
+
+    showHide: (e) =>
+      @.$el.find(".icons-hover").removeClass("visible")
+
+    deletePicture: (e) =>
+      @.$el.hide()
+
 
 
   class Prev.Empty extends App.Views.ItemView

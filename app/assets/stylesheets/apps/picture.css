@@ -14,22 +14,19 @@ padding-top: 40px;
 display:none;
 width: 100%;
 background-image: #0000000;
-
-position: absolute;
-top: 40%;
-left: 30%;
+position: relative;
+z-index: 99;
 }
 
 .icons-hover.visible {
 display:block;
-z-index: 99;
-font-size: 2em;
 }
 
-.pic-trash, .pic-save {
-display: inline-block;
-font-size: 1,5em;
-padding: 15px;
+.pic-trash {
+position: absolute;
+bottom: 60px;
+left: 45%;
+font-size: 1.5em;
 color: #ffffff;
 }
 

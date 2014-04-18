@@ -7,14 +7,13 @@
       ticket_id = ticket.id
       App.mainRegion.close()
       pictures = new Backbone.Collection([])
-      window.coll = pictures
 
       @layout = @getLayoutView ticket
 
       @listenTo @layout, "show", =>
         @pictureRegion(ticket, pictures)
-        @takenPicturesRegion(pictures)
-        @ticketPrevRegion(ticket)
+        # @takenPicturesRegion(pictures)
+        @ticketPrevRegion(ticket, pictures)
 
       @listenTo @layout, "stop:recording", =>
         category_id  = ticket.cat_id
@@ -26,33 +25,9 @@
       App.photoRegion.show @layout
 
 
-    ticketPrevRegion: (ticket) ->
-      App.vent.trigger "preview:ticket:show", @layout.ticketPrevRegion, ticket
+    ticketPrevRegion: (ticket, pictures) ->
+      App.vent.trigger "preview:ticket:show", @layout.ticketPrevRegion, ticket, pictures
 
-
-    takenPicturesRegion: (pictures) ->
-      takenView = @getTakenPicturesRegion(pictures)
-
-      # @listenTo takenView, "childview:edit:picture:clicked", (child, args) ->
-      #   picture = child.model
-
-      @listenTo takenView, "childview:save:picture:clicked", (child, args) ->
-        picture = child.model
-        window.pp = picture
-        file = picture.get("file")
-        Recorder.upload "/tickets/#{picture.ticket_id}/pictures",
-          name: "sofish"
-          file: file
-        , (data) ->
-          console.log data
-          return
-
-      # @listenTo takenView, "childview:delete:picture:clicked", (child, args) ->
-
-
-
-
-      @show takenView, region: @layout.takenPicturesRegion
 
 
     editPictureRegion: (picture) ->
@@ -72,13 +47,20 @@
         picture.set({src: imgSource})
         picture.set({file: imgSource})
         pictures.add(picture)
+        file = imgSource
+        Recorder.upload "/tickets/#{picture.ticket_id}/pictures",
+          name: "sofish"
+          file: file
+        , (data) ->
+          console.log data
+          return
 
       @show pictureView, region: @layout.pictureRegion
 
-
-    getTakenPicturesRegion: (pictures) ->
-      new New.TakenPictures
-        collection: pictures
+    #
+    # getTakenPicturesRegion: (pictures) ->
+    #   new New.TakenPictures
+    #     collection: pictures
 
     getEditPictureView: (picture) ->
       new New.EditPicture
