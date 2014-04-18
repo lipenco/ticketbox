@@ -1,0 +1,11 @@
+<div class="price-table">
+  <div id="name-region"></div>
+  <div id="description-region"></div>
+
+<!--
+  <section class="contents">
+    <ul  id="droppable" class="ui-widget-header">
+      <li><img class="tickett" src="/assets/prew.png"></li>
+    </ul>
+  </section> -->
+</div>

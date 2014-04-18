@@ -27,18 +27,7 @@
 
 
     ticketPrevRegion: (ticket) ->
-      prevView = @getPrevRegion(ticket)
-
-      @listenTo prevView, "description:save", (ticket) =>
-        text = $(".edit-document").html()
-        ticket.set({description: text})
-        window.tt = ticket
-        category_id = ticket.cat_id
-        ticket_id = ticket.id
-        ticket.url = "/categories/#{category_id}/tickets/#{ticket_id}"
-        ticket.save()
-
-      @show prevView, region: @layout.ticketPrevRegion
+      App.vent.trigger "preview:ticket:show", @layout.ticketPrevRegion, ticket
 
 
     takenPicturesRegion: (pictures) ->

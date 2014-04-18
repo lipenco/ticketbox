@@ -1,0 +1,4 @@
+<section class="head">
+  <h1><%= @name %> </h1>
+  <i class="fa fa-barcode"></i>
+</section>
