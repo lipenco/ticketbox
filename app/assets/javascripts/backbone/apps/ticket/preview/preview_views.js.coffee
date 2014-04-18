@@ -21,7 +21,7 @@
     strokeDetector: (e) =>
       model = @.model
       if (e.keyCode ==32 || e.keyCode ==190 )
-        @trigger "description:save", (model)
+        @trigger "picture:save", (model)
 
 
   class Prev.Picture extends App.Views.ItemView
@@ -40,6 +40,13 @@
       @.$el.find(".icons-hover").removeClass("visible")
 
     deletePicture: (e) =>
+      model = @.model
+      window.mm = model
+      ticket_id = model.ticket_id
+      picture_id = model.get("picture_id")
+      $.ajax
+        method: 'DELETE',
+        url: "tickets/#{ticket_id}/pictures/#{picture_id}"
       @.$el.hide()
 
 

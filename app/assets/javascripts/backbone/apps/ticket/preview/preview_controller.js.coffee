@@ -4,9 +4,13 @@
 
     initialize: (options)->
       {ticket, pictures} = options
-      window.pic = pictures
 
-      @layout = @getLayoutView ticket
+
+
+      @layout = @getLayoutView ticket, pictures
+
+      @listenTo @layout, "picture:delete", (picture) =>
+        console.log "here"
 
       @listenTo @layout, "show", =>
         @nameRegion(ticket)
@@ -22,8 +26,11 @@
     picturesRegion: (ticket, pictures) ->
       picturesView = @getPicturesView ticket, pictures
 
-      @listenTo picturesView, "childview:delete:picture:clicked", (child, args) ->
-        console.log "clikcer"
+      @listenTo picturesView, "picture:delete:clicked", =>
+        console.log "here"
+
+      # @listenTo picturesView, "picture:delete:clicked", (picture) =>
+      #   console.log "here"
 
       @show picturesView, region: @layout.picturesRegion
 
@@ -31,7 +38,7 @@
     descriptionRegion: (ticket) ->
       descView = @getDescView ticket
 
-      @listenTo descView, "description:save", (ticket) =>
+      @listenTo descView, "picture:save", (ticket) =>
         text = $(".edit-document").html()
         ticket.set({description: text})
         window.tt = ticket

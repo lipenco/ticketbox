@@ -45,13 +45,17 @@
         imgSource = Recorder.snapshot(video)
         picture = App.request "new:picture:entity", ticket_id
         picture.set({src: imgSource})
-        picture.set({file: imgSource})
+        # picture.set({file: imgSource})
+        picture.set({ticket_id: ticket_id})
         pictures.add(picture)
         file = imgSource
         Recorder.upload "/tickets/#{picture.ticket_id}/pictures",
           name: "sofish"
           file: file
         , (data) ->
+          JSON.parse(data).id
+          picture.set({picture_id: JSON.parse(data).id})
+          # window.data = data
           console.log data
           return
 
