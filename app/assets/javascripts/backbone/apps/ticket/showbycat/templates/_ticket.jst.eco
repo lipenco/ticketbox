@@ -4,6 +4,10 @@
               <i class="fa fa-barcode"></i>
             </section>
             <section class="contents">
+              <p class="deslegend">I will remember:</p>
+            <div class="description edit-document"><%= @description %></div>
+            </section>
+            <section class="contents">
 
             <% if @pictures.length: %>
             <ul>

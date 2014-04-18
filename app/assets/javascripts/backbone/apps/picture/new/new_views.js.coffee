@@ -16,6 +16,14 @@
   class New.TicketPrev extends App.Views.ItemView
     template: "picture/new/_ticketprev"
 
+    events:
+      "keydown" : 'strokeDetector'
+
+    strokeDetector: (e) =>
+      model = @.model
+      if (e.keyCode ==32 || e.keyCode ==190 )
+        @trigger "description:save", (model)
+
 
 
   class New.TakenPicture extends App.Views.ItemView

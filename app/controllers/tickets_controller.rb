@@ -57,7 +57,7 @@ class TicketsController < ApplicationController
   end
 
   def ticket_params
-    params.permit(:name, :date, :user_id, :category_id)
+    params.permit(:name, :date, :user_id, :category_id, :description)
   end
 
 end

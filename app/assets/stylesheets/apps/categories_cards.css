@@ -251,6 +251,7 @@ display: inline-block;
 
 .tickett {
 width: 100%;
+height:180px;
 display: inline-block;
 padding-top: 10px;
 }
