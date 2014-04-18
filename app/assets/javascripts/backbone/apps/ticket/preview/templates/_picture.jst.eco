@@ -1,1 +1,1 @@
-<li><img class="tickett" src="/assets/prew.png"></li>
+<li><img class="tickett" src="<%= picture.urll %>"></li>

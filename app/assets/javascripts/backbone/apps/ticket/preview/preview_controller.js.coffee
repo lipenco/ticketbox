@@ -10,6 +10,7 @@
       @listenTo @layout, "show", =>
         @nameRegion(ticket)
         @descriptionRegion(ticket)
+        @picturesRegion(ticket)
         # @ticketRegion(ticket)
         # @picturesRegion(ticket)
 
@@ -18,6 +19,11 @@
     nameRegion: (ticket) ->
       nameView = @getNameView ticket
       @show nameView, region: @layout.nameRegion
+
+    picturesRegion: (ticket) ->
+      picturesView = @getPicturesView ticket
+      @show picturesView, region: @layout.picturesRegion
+
 
     descriptionRegion: (ticket) ->
       descView = @getDescView ticket
@@ -37,6 +43,12 @@
     getDescView: (ticket) ->
       new Prev.Description
         model: ticket
+
+    getPicturesView: (ticket) ->
+      pictures = ticket.get("pictures")
+      new Prev.Pictures
+        model: ticket
+        collection: pictures
 
 
 

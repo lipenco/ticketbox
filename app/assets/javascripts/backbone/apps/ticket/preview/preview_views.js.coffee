@@ -24,19 +24,18 @@
         @trigger "description:save", (model)
 
 
-  # class Prev.Picture extends App.Views.ItemView
-  #   template: "ticket/showbycat/_ticket"
-  #   tagName: "li"
-  #   className: ""
-  #
-  #
-  # class Prev.Empty extends App.Views.ItemView
-  #   template: "ticket/showbycat/_empty"
-  #   tagName:  "li"
-  #
-  #
-  # class Prev.Tickets extends App.Views.CompositeView
-  #   template: "ticket/showbycat/_tickets"
-  #   itemView: Prev.Picture
-  #   emptyView: Prev.Empty
-  #   itemViewContainer: "ul"
+  class Prev.Picture extends App.Views.ItemView
+    template: "ticket/preview/_picture"
+    tagName: "li"
+
+
+
+  class Prev.Empty extends App.Views.ItemView
+    template: "ticket/preview/_empty"
+    tagName:  "li"
+
+  class Prev.Pictures extends App.Views.CompositeView
+    template: "ticket/preview/_pictures"
+    itemView: Prev.Picture
+    emptyView: Prev.Empty
+    itemViewContainer: "ul"
