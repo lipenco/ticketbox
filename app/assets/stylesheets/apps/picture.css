@@ -67,3 +67,18 @@ bottom: 0;
 right:0;
 
 }
+
+
+
+#description-input input[type=text]  {
+bacground: transparent;
+border: none;
+border: 0;
+border-radius:0;
+
+}
+
+#description-input input[type="text"]:focus ,
+#description-input input[type="password"]:focus {
+  outline: none;
+}

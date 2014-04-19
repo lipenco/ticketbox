@@ -1,4 +1,4 @@
 <section class="contents description-section">
   <p class="deslegend">I will remember most:</p>
-    <div class="description edit-document" contenteditable="true">Write your impressionss here</div>
+    <input type="text" id="description-input" placeholder="Write your impressionss here"></input>
 </section>

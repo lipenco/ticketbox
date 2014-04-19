@@ -13,7 +13,7 @@
             <% if @pictures.length: %>
             <ul>
               <% for picture in @pictures: %>
-                <li><img class="tickett" src="<%= picture.urll %>"></li>
+                <li><img class="tickett show" src="<%= picture.urll %>"></li>
               <% end %>
             </ul>
             <% else: %>
