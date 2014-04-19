@@ -17,7 +17,7 @@
               <% end %>
             </ul>
             <% else: %>
-              <p>No pictures</p>
+              <p class="nopictures">You didn't add any pictures</p>
             <% end %>
           </section>
       </div>
