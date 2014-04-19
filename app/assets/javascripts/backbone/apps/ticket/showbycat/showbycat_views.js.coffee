@@ -14,7 +14,7 @@
   class ShowByCat.Ticket extends App.Views.ItemView
     template: "ticket/showbycat/_ticket"
     tagName: "li"
-    className: "ticket_li col-md-3"
+    className: "ticket_li col-md-4"
 
     triggers:
       "click .ticket-delete button" : "ticket:delete:clicked"

@@ -1,21 +1,21 @@
       <div class="price-table">
             <section class="head">
               <h1><%= @name %> </h1>
+              <div class="rubber_stamp rubber_stamp_idle"><%= @date %></div>
               <i class="fa fa-barcode"></i>
             </section>
-            <section class="contents">
-              <p class="deslegend">I will remember:</p>
+            <section class="contents description-section">
+              <p class="deslegend">I will remember most:</p>
             <div class="description edit-document"><%= @description %></div>
             </section>
-            <section class="contents">
 
+            <section class="contents">
             <% if @pictures.length: %>
             <ul>
               <% for picture in @pictures: %>
                 <li><img class="tickett" src="<%= picture.urll %>"></li>
               <% end %>
             </ul>
-
             <% else: %>
               <p>No pictures</p>
             <% end %>

@@ -1,4 +1,5 @@
 <section class="head">
   <h1><%= @name %> </h1>
+  <div class="rubber_stamp rubber_stamp_idle"><%= @date %></div>
   <i class="fa fa-barcode"></i>
 </section>

@@ -37,17 +37,17 @@ padding-left: 10px;
 .head:after, .head:before {
   content: "";
   display: block;
-  width: 13px;
-  height: 13px;
-  background-color: #edeff1;
+  width: 16px;
+  height: 16px;
+  background-color: #d5d4d3;
   position: absolute;
-  right: -22px;
+  right: -8px;
   border-radius: 50%;
   z-index: 2000;
   bottom: -7px;
 }
 .head:after {
-  left: -22px;
+  left: -8px;
 }
 
 button {
@@ -139,7 +139,7 @@ body {
   width: 100%;
   bottom: -1000px;
   margin-right: 3%;
-  padding: 0 1em;
+  padding: 0;
   border-radius: 7px 7px 0px 0px;
   background-color: #34495e;
   text-align: center;
@@ -149,13 +149,16 @@ body {
   bottom: 0px;
 }
 
+
+
 .price-table {
  margin-top: 20px;
+ padding-bottom: 20px;
 
 }
 
 .head {
-  padding: 25px 7px;
+  padding: 25px 2em;
   border-bottom: 1px solid #e6e6e6;
   text-align: left;
 }
@@ -212,9 +215,9 @@ h2 {
 .contents li {
   list-style: none;
 }
-.contents li:last-child {
+/*.contents li:last-child {
   margin-top: 1em;
-}
+}*/
 .contents ul {
   margin: 0;
   padding-left: 20px;
@@ -251,9 +254,9 @@ display: inline-block;
 
 .tickett {
 width: 100%;
-height:180px;
+height:250px;
 display: inline-block;
-padding-top: 10px;
+padding-top: 0;
 }
 
 .showall {
@@ -274,3 +277,70 @@ font-style: normal;
 font-size: 22px;
 line-height: 1.5;
 }
+
+.description-section {
+padding: 1em 2em 1.7em;
+background: rgba(255,255,255,0.1);
+}
+
+.description-section .deslegend {
+  font-size: 1.3em;
+  font-weight: 100;
+  letter-spacing:2px;
+  text-shadow:0px 1px 0px #333;
+  color:#FFF9EE;
+
+
+}
+
+
+
+
+.rubber_stamp {
+  display: table-cell;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding-top: 10px;
+/*  color: rgba(99, 76, 122, 1);
+  border: 2px solid rgba(99, 76, 122, 1);*/
+  border-radius: 50%;
+  position: absolute;
+  top:15px;
+  right:5%;
+/*  opacity: 0.8;*/
+-webkit-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);*/
+}
+
+.rubber_stamp_idle {
+/*  color: rgba(99, 76, 122, 1);*/
+  border: 2px solid #000000;
+  color: #000000;
+  text-shadow:0px 1px 0px #333;
+  box-shadow:1px 1px 0px #333;
+}
+
+/*.rubber_stamp:hover {
+  color: rgba(255,255,255,0.1);
+  background-color: rgba(99, 76, 122, 1);
+  border: 2px solid rgba(255,255,255,1);
+}*/
+
+.rubber_stamp:after {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  top: -10px;
+  left: -10px;
+  padding: 10px;
+  background: url('/assets/download2.png')

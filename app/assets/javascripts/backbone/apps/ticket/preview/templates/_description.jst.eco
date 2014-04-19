@@ -1,4 +1,4 @@
-<section class="contents">
-    <p class="deslegend">I will remember:</p>
+<section class="contents description-section">
+  <p class="deslegend">I will remember most:</p>
     <div class="description edit-document" contenteditable="true">Write your impressionss here</div>
 </section>
