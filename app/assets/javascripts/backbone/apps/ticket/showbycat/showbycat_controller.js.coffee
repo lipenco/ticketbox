@@ -4,17 +4,22 @@
 
     initialize: (options) ->
       {category, id} = options
-      id = category.get("id") if category
-      tickets = App.request "ticket:entities", id
-      category or= App.request "category:entity", id
+      currentUser = App.request "get:current:user"
+      currentUserId = currentUser.get("id")
+      if currentUserId
+        id = category.get("id") if category
+        tickets = App.request "ticket:entities", id
+        category or= App.request "category:entity", id
 
-      @layout = @getLayoutView tickets, category
+        @layout = @getLayoutView tickets, category
 
-      @listenTo @layout, "show", =>
-        @ticketRegion(tickets)
-        @titleRegion(category)
+        @listenTo @layout, "show", =>
+          @ticketRegion(tickets)
+          @titleRegion(category)
 
-      @show @layout, loading: true
+        @show @layout, loading: true
+      else
+        App.vent.trigger "landing:page:show"
 
     ticketRegion: (tickets) ->
       ticketsView = @getTicketsView tickets
