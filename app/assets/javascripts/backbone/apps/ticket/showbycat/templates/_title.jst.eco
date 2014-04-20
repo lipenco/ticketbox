@@ -1,1 +1,1 @@
-<h2>Your tickets from <%= @name %> </h2>
+<h1 class="gallery-title">Your tickets from <%= @name %> </h1>
