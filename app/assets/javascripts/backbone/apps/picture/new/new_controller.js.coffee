@@ -12,7 +12,6 @@
 
       @listenTo @layout, "show", =>
         @pictureRegion(ticket, pictures)
-        # @takenPicturesRegion(pictures)
         @ticketPrevRegion(ticket, pictures)
 
       @listenTo @layout, "stop:recording", =>
@@ -61,10 +60,7 @@
 
       @show pictureView, region: @layout.pictureRegion
 
-    #
-    # getTakenPicturesRegion: (pictures) ->
-    #   new New.TakenPictures
-    #     collection: pictures
+
 
     getEditPictureView: (picture) ->
       new New.EditPicture

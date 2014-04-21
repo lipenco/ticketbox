@@ -13,39 +13,10 @@
       "click #stop"  :    "stop:recording"
 
 
-
-  class New.TakenPicture extends App.Views.ItemView
-    template: "picture/new/_takenpicture"
-    tagName: "li"
-    className: "col-md-12"
-
-    events:
-      "mouseover .wrapper" : "showIcons"
-      "mouseleave .wrapper" : "showHide"
-      "click .pic-trash" :   "deletePicture"
-
-    showIcons: (e) =>
-      @.$el.find(".icons-hover").addClass("visible")
-
-    showHide: (e) =>
-      @.$el.find(".icons-hover").removeClass("visible")
-
-    deletePicture: (e) =>
-      @.$el.hide()
-
-
-
-    triggers:
-      "click .pic-save" : "save:picture:clicked"
-      # "click .pic-trash" : "delete:picture:clicked"
-
-
   class New.Empty extends App.Views.ItemView
     template: "picture/new/_empty"
     tagName:  "li"
     className: "col-md-12"
-
-
 
 
   class New.TakenPictures extends App.Views.CompositeView

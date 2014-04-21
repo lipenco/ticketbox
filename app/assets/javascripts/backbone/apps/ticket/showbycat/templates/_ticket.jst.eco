@@ -4,10 +4,12 @@
               <div class="rubber_stamp rubber_stamp_idle"><%= @date %></div>
               <i class="fa fa-barcode"></i>
             </section>
-            <section class="contents description-section">
-              <p class="deslegend">I will remember most:</p>
-            <div class="description edit-document"><%= @description %></div>
-            </section>
+            <% if @description != null: %>
+              <section class="contents description-section">
+                <p class="deslegend">I will remember most:</p>
+              <div class="description edit-document"><%= @description %></div>
+              </section>
+             <% end %>
 
             <section class="contents">
             <% if @pictures.length: %>

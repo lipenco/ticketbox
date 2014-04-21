@@ -1,7 +1,5 @@
 
 <video  id="video" autoplay="autoplay" src=""></video>
-
-
 <div class="flat-anim animation">
 	<span class="eye"></span>
 	<span class="bottom"></span>

@@ -1,9 +1,7 @@
-<div class="image">
   <div class="wrapper" >
-    <img class="takenpicture"  src="<%= @src %>">
+    <img class="tickett show"  src="<%= @src %>">
     <div class="icons-hover">
       <div class="pic-trash"><span class="glyphicon glyphicon-trash
        glyphicon"></span></div>
     </div>
   </div>
-</div>
