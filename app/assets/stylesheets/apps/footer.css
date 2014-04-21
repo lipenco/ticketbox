@@ -12,12 +12,16 @@ footer p {
   font-size: 15px;
   line-height: 20px;
   margin-bottom: 10px;
+  color: #333;
+  opacity: 0.8;
+
 }
 .footer-title {
   margin: 0 0 22px;
   padding-top: 21px;
   font-size: 24px;
   line-height: 40px;
+  color: #333;
 }
 .footer-brand {
   display: block;

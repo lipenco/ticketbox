@@ -61,12 +61,11 @@ p.secondline {
 }
 
 #home-bg {
-  background: url('/assets/fest.jpg') center top;
+/*  background: url('/assets/fest.jpg') center top;*/
   background-size: cover;
   background-attachment: fixed;
   /*margin-top: 90px;*/
-  padding-top: 100px;
-  padding-bottom: 520px;
+  padding-bottom: 100px;
    filter: sepia; /* IE6-9 */
     -webkit-filter: sepia(100%); /* Chrome 19+ & Safari 6+ */
     -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
@@ -512,6 +511,7 @@ background: #fff;
 /*  width: 100%;*/
 }
 .tile-title {
+  padding-bottom: 10px;
   font-size: 20px;
   margin: 0;
   text-align: center;

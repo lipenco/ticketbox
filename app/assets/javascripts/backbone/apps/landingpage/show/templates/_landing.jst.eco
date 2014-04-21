@@ -1,6 +1,6 @@
 
 <section id="home">
-  <div class="row  wrapper-top">
+<!--   <div class="row  wrapper-top">
     <div class="container">
       <div class="col-md-10 col-md-offset-1 headline"><p>
         Don't forget to remember</p>
@@ -11,9 +11,21 @@
        </div>
     </div>
   </div>
-</div>
+</div> -->
 
 	<div id="home-bg">
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+      <header class="big-banner tall demo-header">
+        <h1 id="shine" class="shine large light shine-text-color">
+          Ticket Box
+        </h1>
+        <p class="medium shine-text-color shine-text-color-dark">
+          Don't forget to remember.
+        </p>
+      </header>
+    </div>
+    </div>
 	</div>
 </section>
 
@@ -31,44 +43,39 @@
   <div class="row demo-tiles">
         <div class="col-xs-3">
           <div class="tile">
-            <img src="/assets/theater.ico" class="tile-image big-illustration"></img>
-<!--             <img src="images/icons/svg/compas.svg" alt="Compas" class="tile-image big-illustration"> -->
+            <img src="/assets/cinem.png" class="tile-image big-illustration"></img>
             <h3 class="tile-title">Choose Category</h3>
-            <p>100% convertable to HTML/CSS layout.</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Get Pro</a>
+            <p>Cinema, play, sport, flight... put it in a right box</p>
+            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 1</a>
           </div>
         </div>
 
         <div class="col-xs-3">
           <div class="tile">
-            <img src="/assets/theater.ico" class="tile-image big-illustration"></img>
+            <img src="/assets/camera.png" class="tile-image big-illustration"></img>
 
-<!--             <img src="images/icons/svg/loop.svg" alt="Infinity-Loop" class="tile-image"> -->
             <h3 class="tile-title">Take a Picture</h3>
-            <p>Vector-based shapes and minimum of layer styles.</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Get Pro</a>
+            <p>Use your browser camera to degitalize your picture</p>
+            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 2</a>
           </div>
         </div>
 
         <div class="col-xs-3">
           <div class="tile">
-            <img src="/assets/theater.ico" class="tile-image big-illustration"></img>
+            <img src="/assets/pen.png" class="tile-image big-illustration"></img>
 
-<!--             <img src="images/icons/svg/pencils.svg" alt="Pensils" class="tile-image"> -->
             <h3 class="tile-title">Write a Note</h3>
-            <p>Easy to add or change elements. </p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Get Pro</a>
+            <p>What will you remember the most</p>
+            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 3</a>
           </div>
         </div>
 
         <div class="col-xs-3">
           <div class="tile tile-hot">
-            <img src="/assets/theater.ico" class="tile-image big-illustration"></img>
-
-<!--             <img src="images/icons/svg/chat.svg" alt="Chat" class="tile-image"> -->
-            <h3 class="tile-title">Share It</h3>
-            <p>Your likes, shares and comments helps us.</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Get Pro</a>
+            <img src="/assets/stat.png" class="tile-image big-illustration"></img>
+            <h3 class="tile-title">Track It</h3>
+            <p>Never forget your experiences.</p>
+            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 4</a>
           </div>
 
         </div>
@@ -81,32 +88,33 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-7">
-            <h3 class="footer-title">Ticket is the nices souvenir</h3>
+            <h3 class="footer-title">Ticket is the nicest souvenir</h3>
             <p>Start collecting your ticket now.<br>
               Take the photo of your ticket and save the memories.
             </p>
 
-            <p class="pvl">
+<!--             <p class="pvl">
               <iframe src="http://ghbtns.com/github-btn.html?user=designmodo&amp;repo=Flat-UI&amp;type=watch&amp;count=true" height="20" width="107" frameborder="0" scrolling="0" style="width:105px; height: 20px;" allowtransparency="true"></iframe>
               <iframe src="http://ghbtns.com/github-btn.html?user=designmodo&amp;repo=Flat-UI&amp;type=fork&amp;count=true" height="20" width="107" frameborder="0" scrolling="0" style="width:105px; height: 20px;" allowtransparency="true"></iframe>
               <iframe src="http://ghbtns.com/github-btn.html?user=designmodo&amp;type=follow&amp;count=true" height="20" width="195" frameborder="0" scrolling="0" style="width:195px; height: 20px;" allowtransparency="true"></iframe>
-            </p>
+            </p> -->
+            <br/>
+            <br/>
 
             <a class="footer-brand" href="http://lipen.co" target="_blank">
-              Lipen.co</a>
+              Made by Lipen.co</a>
           </div>
 
           <div class="col-xs-5">
             <div class="footer-banner">
               <h3 class="footer-title">Ticket is the nicest souvenir</h3>
               <ul>
-                <li>Tons of Basic and Custom UI Elements</li>
-                <li>A Lot of Useful Samples</li>
-                <li>More Vector Icons and Glyphs</li>
-                <li>Pro Color Swatches</li>
-                <li>Bootstrap Based HTML/CSS/JS Layout</li>
+                <li>Experiences Matters</li>
+                <li>Degitalize your pictures</li>
+                <li>Have them all in the cloud</li>
+                <li>Reliese your shelves</li>
+                <li>Don't worry about fisical tickets</li>
               </ul>
-              Go to: <a href="http://designmodo.com/flat" target="_blank">designmodo.com/flat</a>
             </div>
           </div>
         </div>

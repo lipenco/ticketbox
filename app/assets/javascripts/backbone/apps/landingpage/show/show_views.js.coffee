@@ -12,4 +12,18 @@
     template: "landingpage/show/_landing"
 
     triggers:
-      "click .wrapper-top" : "open:menu:clicked"
+      "click #shine" : "open:menu:clicked"
+
+    events:
+      "mousemove" : "shinetrigger"
+
+    onShow:->
+      @shineSetup()
+
+    shineSetup:->
+      window.shine = new Shine(document.getElementById('shine'))
+
+    shinetrigger:->
+      shine.light.position.x = event.clientX
+      shine.light.position.y = event.clientY
+      shine.draw()
