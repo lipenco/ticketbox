@@ -64,38 +64,60 @@ border-color: #ec7063;
 #stop {
 position: fixed;
 bottom: 0;
-right:0;
+left:0;
+width: 155px;
+border-radius: 0;
+}
+
+#arrow {
+position: fixed;
+top: 0;
+right:10px;
+height: 155px;
+width: 155px;
+border-radius: 0;
 
 }
 
 
 
-input[type=text]#description-input  {
+textarea[type=text]#description-input  {
 /*bacground: transparent;*/
-border: none;
-border: 0;
+
+
 border-radius:0;
 background-color : #34495e;
 color: #fff;
+padding-left:0;
+border: 0;
+margin: 0;
+padding: 0;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
 }
 
-input[type=text]#description-input::-webkit-input-placeholder {
+textarea[type=text]#description-input::-webkit-input-placeholder {
     color: #fff;
 }
-input[type=text]#description-input:-moz-placeholder {
+textarea[type=text]#description-input:-moz-placeholder {
     color: #fff;
 }
-input[type=text]#description-input::-moz-placeholder {
+textarea[type=text]#description-input::-moz-placeholder {
     color: #fff;
 }
-input[type=text]#description-input:-ms-input-placeholder {
+textarea[type=text]#description-input:-ms-input-placeholder {
     color: #fff;
 }
 
 
+
+textarea[type=text]:focus {
+
+  outline: none;
 }
 
- input[type="text"]:focus#description-input ,
- input[type="password"]:focus#description-input {
+
+textarea[type=text]#description-input:focus {
   outline: none;
 }

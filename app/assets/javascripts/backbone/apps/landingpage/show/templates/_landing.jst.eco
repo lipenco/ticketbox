@@ -1,17 +1,5 @@
 
 <section id="home">
-<!--   <div class="row  wrapper-top">
-    <div class="container">
-      <div class="col-md-10 col-md-offset-1 headline"><p>
-        Don't forget to remember</p>
-        <p class="secondline"> Your Tickets Collection Degitalized</p>
-      </div>
-      <div id="faded-logo" class="col-md-4 col-md-offset-4">
-        <p>TICKET BOX</p></div>
-       </div>
-    </div>
-  </div>
-</div> -->
 
 	<div id="home-bg">
     <div class="container">
@@ -46,7 +34,7 @@
             <img src="/assets/cinem.png" class="tile-image big-illustration"></img>
             <h3 class="tile-title">Choose Category</h3>
             <p>Cinema, play, sport, flight... put it in a right box</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 1</a>
+            <div class="btn btn-primary btn-large btn-block">Step 1</div>
           </div>
         </div>
 
@@ -56,7 +44,7 @@
 
             <h3 class="tile-title">Take a Picture</h3>
             <p>Use your browser camera to degitalize your picture</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 2</a>
+            <div class="btn btn-primary btn-large btn-block" >Step 2</div>
           </div>
         </div>
 
@@ -66,7 +54,7 @@
 
             <h3 class="tile-title">Write a Note</h3>
             <p>What will you remember the most</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 3</a>
+            <div class="btn btn-primary btn-large btn-block">Step 3</div>
           </div>
         </div>
 
@@ -75,7 +63,7 @@
             <img src="/assets/stat.png" class="tile-image big-illustration"></img>
             <h3 class="tile-title">Track It</h3>
             <p>Never forget your experiences.</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Step 4</a>
+            <div class="btn btn-primary btn-large btn-block" >Step 4</div>
           </div>
 
         </div>
@@ -88,7 +76,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-7">
-            <h3 class="footer-title">Ticket is the nicest souvenir</h3>
+            <h3 class="footer-title">Degitalize your Tickets Collection</h3>
             <p>Start collecting your ticket now.<br>
               Take the photo of your ticket and save the memories.
             </p>

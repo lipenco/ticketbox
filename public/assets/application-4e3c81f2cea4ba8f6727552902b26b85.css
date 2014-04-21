@@ -646,7 +646,7 @@ display: inline-block;
 
 .tickett {
 width: 100%;
-height:250px;
+height:212px;
 display: inline-block;
 padding-top: 0;
 -webkit-transition: all 1s;
@@ -2227,7 +2227,10 @@ margin-top: -20px;
   .light.shine,
   .light .shine,
   .light .highlight {
-    color: #f7f7f7; }
+    color: #f7f7f7;
+    cursor: pointer;
+
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

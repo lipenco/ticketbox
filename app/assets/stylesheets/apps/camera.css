@@ -109,8 +109,12 @@
 }
 /* Animation */
 
-.flat-anim {
+.flat-anim{
   -webkit-animation: flatAnimation 5s infinite;
+}
+
+#arrow {
+	-webkit-animation: flatAnimation 2s infinite;
 }
 
 @-webkit-keyframes flatAnimation {

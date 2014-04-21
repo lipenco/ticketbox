@@ -1,4 +1,4 @@
-<section class="contents description-section">
+<section class="contents description-section prev">
   <p class="deslegend">I will remember most:</p>
-    <input type="text" id="description-input" placeholder="Write your impressionss here"></input>
+    <textarea  type="text" id="description-input" class="edit-document" placeholder="Write your impressionss here"></textarea>
 </section>

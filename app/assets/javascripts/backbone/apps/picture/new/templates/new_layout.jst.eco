@@ -2,5 +2,6 @@
 <div class="row col-md-12">
   <div id="picture-region" class="col-md-8"></div>
   <div  id="ticket-prev-region" class="col-md-4"></div>
+  <img id="arrow" src="/assets/arrow.png">
   <button id="stop" class="btn btn-block btn-lg btn-danger ">I am done</button>
 </div>
