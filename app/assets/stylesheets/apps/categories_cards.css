@@ -5,6 +5,10 @@
 padding-top: 40px;
 }
 
+#add-to-category-region {
+padding: 0;
+
+}
 
 #categories-user-region ul.row{
 
@@ -13,7 +17,7 @@ margin-right: 0;
 padding-left: 10px;
 }
 
-.price-table:after {
+.ticket-body:after {
   content: "";
   display: block;
   position: absolute;
@@ -25,6 +29,8 @@ padding-left: 10px;
   height: 16px;
   width: 100%;
 }
+
+
 
 .head {
   position: relative;
@@ -48,6 +54,10 @@ padding-left: 10px;
 }
 .head:after {
   left: -8px;
+}
+
+.head.prev:before, .head.prev:after {
+  background: #d8d8d8 url(http://minimalmonkey.com/lab/image-ordering-tool/graphics/bg-noise.png);
 }
 
 button {
@@ -93,7 +103,7 @@ body {
   font-style: italic;
   color: #e6e6e6;
 }
-.add-films .price-table {
+.add-films .ticket-body {
   padding-bottom: 18px;
   text-align: right;
 }
@@ -133,7 +143,7 @@ body {
 
 
 
-.price-table {
+.ticket-body {
   display: block;
   position: relative;
   width: 100%;
@@ -145,13 +155,13 @@ body {
   text-align: center;
   transition: bottom 400ms 200ms ease-in-out;
 }
-.arise .price-table {
+.arise .ticket-body {
   bottom: 0px;
 }
 
 
 
-.price-table {
+.ticket-body {
  margin-top: 20px;
  padding-bottom: 20px;
 
@@ -359,6 +369,17 @@ background: rgba(255,255,255,0.1);
 .nopictures {
 
   padding-left: 2em;
+}
+
+.showtickets {
+margin-top: 40px;
+
+}
 
 
+.btn.btn-primary.category-button {
+border-bottom: 1px solid rgba(0,0,0, 0.2);
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+margin-bottom: 0;
+border-radius: 0;
 }

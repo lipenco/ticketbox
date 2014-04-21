@@ -228,8 +228,8 @@ background: #d8d8d8 url(http://minimalmonkey.com/lab/image-ordering-tool/graphic
 }
 
 .snap-drawer {
-	background: #16A085;
-	color: #eee;
+	background:  #1abc9c;
+	color: #fff;
 }
 
 .snap-drawer h3 {
@@ -255,10 +255,11 @@ background: #d8d8d8 url(http://minimalmonkey.com/lab/image-ordering-tool/graphic
   border-bottom: 1px solid rgba(0,0,0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px;
-  font-weight: bold;
-  text-shadow: 0 1px 0 #000;
+  font-weight: 200;
+  letter-spacing: 1px;
+/*  text-shadow: 0 1px 0 #000;*/
   text-decoration: none;
-  color: #ccc;
+  color: #fff;
   text-indent: 20px;
 }
 

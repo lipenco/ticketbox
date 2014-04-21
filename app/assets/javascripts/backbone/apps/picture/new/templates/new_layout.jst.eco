@@ -2,5 +2,5 @@
 <div class="row col-md-12">
   <div id="picture-region" class="col-md-8"></div>
   <div  id="ticket-prev-region" class="col-md-4"></div>
-  <button id="stop" class="btn btn-block btn-lg btn-danger ">Stop</button>
+  <button id="stop" class="btn btn-block btn-lg btn-danger ">I am done</button>
 </div>

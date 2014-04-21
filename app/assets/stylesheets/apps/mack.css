@@ -1,0 +1,21 @@
+
+.login {
+  background: url('/assets/imac.png') 0 0 no-repeat;
+  background-size: 940px 778px;
+  color: #ffffff;
+  margin-bottom: 77px;
+  margin-top: 70px;
+  padding: 38px 38px 267px;
+  position: relative;
+}
+.login-screen {
+  background: url('/assets/slide1.jpg') 0 0 no-repeat;
+  min-height: 473px;
+  padding: 123px 199px 33px 306px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
+  .login {
+    background-image: url(../images/login/imac-2x.png);
+  }
+}
