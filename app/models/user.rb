@@ -7,9 +7,7 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
       user.email ||= auth[:info][:email] if auth[:info][:email]
-      if auth['provider'] == 'twitter'
-        user.image = auth['info']['image'].sub("_normal", "")
-      end
+      user.image = auth['info']['image'].sub("_normal", "") if auth['provider'] == 'twitter'
     end
   end
 
