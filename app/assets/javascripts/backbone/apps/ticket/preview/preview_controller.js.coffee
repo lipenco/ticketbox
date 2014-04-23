@@ -39,7 +39,7 @@
       descView = @getDescView ticket
 
       @listenTo descView, "picture:save", (ticket) =>
-        text = $("input").val()
+        text = $("textarea").val()
         ticket.set({description: text})
         window.tt = ticket
         category_id = ticket.cat_id
