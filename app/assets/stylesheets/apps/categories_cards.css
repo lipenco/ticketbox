@@ -278,6 +278,11 @@ padding-top: 0;
   -webkit-filter: invert(100%);
 }
 
+.tickett.prew-tic {
+  height:150px;
+
+}
+
 .showall {
 color:#E74C3C;
 
